@@ -1,0 +1,31 @@
+{
+  "success" : true,
+  "message" : "",
+  "data" : {
+    "my_groups" : [
+      {
+        "id" : 1,
+        "name" : "Chronic Kidney Disease Group",
+        "description" : "Testing Description",
+        "key" : "chronic-kidney-disease-group",
+        "new_stats": {
+          "members" : 10,
+          "discussions" : 6,
+          "comments" : 102
+        }
+      },
+      {
+        "id" : 2,
+        "name" : "Diabetes Type 2 Group",
+        "description" : "Testing Description",
+        "key" : "diabetes-type-2-group",
+        "new_stats": {
+          "members" : 5,
+          "discussions" : 3,
+          "comments" : 34
+        }
+      }
+    ]
+  },
+  "meta" : {}
+}

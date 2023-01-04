@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "message": null,
+  "data": {
+    "blocked_users": [
+      {
+        "id": 925592,
+        "login": "Dummy User",
+        "first_name": null,
+        "last_name": null,
+        "avatar_url": "http://localhost:3000/assets/portrait_default_thumb-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+        "primary_condition_id": null
+      },
+      {
+        "id": 542982,
+        "login": "EileenMackThorley",
+        "first_name": "Eileen",
+        "last_name": "Mack Thorley",
+        "avatar_url": "http://localhost:3000/assets/portrait_default_thumb-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+        "primary_condition_id": null
+      },
+      {
+        "id": 23530,
+        "login": "user23530",
+        "first_name": "Andrés",
+        "last_name": "Brakus",
+        "avatar_url": "http://localhost:3000/assets/portrait_default_thumb-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+        "primary_condition_id": null
+      },
+      {
+        "id": 35629,
+        "login": "user35629",
+        "first_name": "Bruce",
+        "last_name": "Schaden",
+        "avatar_url": "http://localhost:3000/assets/portrait_default_thumb-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+        "primary_condition_id": null
+      },
+      {
+        "id": 164695,
+        "login": "user164695",
+        "first_name": "Maxine",
+        "last_name": "Wilderman",
+        "avatar_url": "http://localhost:3000/assets/portrait_default_thumb-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+        "primary_condition_id": null
+      },
+      {
+        "id": 180253,
+        "login": "user180253",
+        "first_name": "Bruce",
+        "last_name": "Brakus",
+        "avatar_url": "http://localhost:3000/assets/portrait_default_thumb-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+        "primary_condition_id": null
+      }
+    ],
+    "last_page": true
+  },
+  "meta": {}
+}

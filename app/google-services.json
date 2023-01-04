@@ -1,0 +1,119 @@
+{
+  "project_info": {
+    "project_number": "94399253081",
+    "firebase_url": "https://plm-mobile-default-rtdb.firebaseio.com",
+    "project_id": "plm-mobile",
+    "storage_bucket": "plm-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94399253081:android:7fb34b8b78d56dd4bd3f48",
+        "android_client_info": {
+          "package_name": "plm.patientslikeme2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94399253081-26buqslddmmn54fccnkfhi3gmjhetci5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq-JGJJHtKYwcGSiOkY4DQpFl21tMxKzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94399253081-26buqslddmmn54fccnkfhi3gmjhetci5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "94399253081-go27nasg8i2qsummfffog287g48a5hqk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.PatientsLikeMe2.0.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94399253081:android:7fb34b8b78d56dd4bd3f48",
+        "android_client_info": {
+          "package_name": "plm.patientslikeme2.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94399253081-26buqslddmmn54fccnkfhi3gmjhetci5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq-JGJJHtKYwcGSiOkY4DQpFl21tMxKzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94399253081-26buqslddmmn54fccnkfhi3gmjhetci5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "94399253081-go27nasg8i2qsummfffog287g48a5hqk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.PatientsLikeMe2.0.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94399253081:android:7fb34b8b78d56dd4bd3f48",
+        "android_client_info": {
+          "package_name": "plm.patientslikeme2.qa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94399253081-26buqslddmmn54fccnkfhi3gmjhetci5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq-JGJJHtKYwcGSiOkY4DQpFl21tMxKzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94399253081-26buqslddmmn54fccnkfhi3gmjhetci5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "94399253081-go27nasg8i2qsummfffog287g48a5hqk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.PatientsLikeMe2.0.dev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

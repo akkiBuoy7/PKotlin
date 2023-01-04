@@ -1,0 +1,194 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+}
+apply from: '../versions.gradle'
+
+// Read credentials
+def credentialFile = rootProject.file("credentials.properties")
+def credentialProperty = new Properties()
+credentialProperty.load(new FileInputStream(credentialFile))
+
+android {
+    compileSdk 32
+    namespace 'plm.patientslikeme2'
+    defaultConfig {
+        applicationId "plm.patientslikeme2"
+        minSdk 28
+        targetSdk 32
+        versionCode 1
+        versionName "1.17"
+        testInstrumentationRunner "plm.patientslikeme2.runner.MyTestRunner"
+    }
+    signingConfigs {
+        release {
+            storeFile file('patients_like_me')
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+            signingConfig signingConfigs.release
+            buildConfigField("String", "BASE_URL", credentialProperty['BASE_URL'])
+            buildConfigField("String", "AMPLITUDE_API_KEY", credentialProperty['AMPLITUDE_API_KEY'])
+        }
+        qa {
+            minifyEnabled false
+            debuggable false
+            applicationIdSuffix ".qa"
+            versionNameSuffix "-qa"
+            signingConfig signingConfigs.release
+            buildConfigField("String", "BASE_URL", credentialProperty['BASE_URL'])
+            buildConfigField("String", "AMPLITUDE_API_KEY", credentialProperty['AMPLITUDE_API_KEY'])
+        }
+        release {
+            minifyEnabled false
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            buildConfigField("String", "BASE_URL", credentialProperty['BASE_URL'])
+            buildConfigField("String", "AMPLITUDE_API_KEY", credentialProperty['AMPLITUDE_API_KEY'])
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+    sourceSets {
+        debug {
+            java.srcDirs += "$projectDir/src/debug/kotlin"
+        }
+        test {
+            java.srcDirs += "$projectDir/src/testShared/kotlin"
+        }
+        androidTest {
+            java.srcDirs += "$projectDir/src/testShared/kotlin"
+        }
+    }
+    testOptions {
+        unitTests.includeAndroidResources = true
+        unitTests.returnDefaultValues = true
+    }
+    configurations.all {
+        resolutionStrategy {
+            force "androidx.test:monitor:$androidx_test_core_version"
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+configurations.all {
+    resolutionStrategy.force "junit:junit:$junit_version"
+}
+dependencies {
+    //Androidx
+    implementation "androidx.core:core-ktx:1.7.0"
+    implementation "androidx.appcompat:appcompat:$app_compat_version"
+    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.5.3"
+    implementation "androidx.navigation:navigation-ui-ktx:2.5.3"
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+    implementation "com.google.firebase:firebase-messaging-ktx:23.1.0"
+    implementation 'androidx.recyclerview:recyclerview-selection:1.1.0'
+    implementation 'androidx.work:work-runtime:2.7.1'
+
+    //Test
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.4.0' // for recyclerview
+    debugImplementation "androidx.fragment:fragment-testing:1.5.4"
+    testImplementation "org.robolectric:robolectric:4.4"
+    testImplementation "junit:junit:$junit_version"
+    testImplementation "com.google.truth:truth:$truth_version"
+    testImplementation "androidx.test.ext:junit:$junit_ext_version"
+
+    // Dependencies for Scenarios
+    debugImplementation "androidx.fragment:fragment-testing:$fragment_testing_version"
+    debugImplementation "androidx.test:core-ktx:$androidx_test_core_version"
+
+    androidTestImplementation "androidx.test.ext:junit:$andoidx_test_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_core_version"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espresso_core_version"
+
+    testImplementation "com.google.dagger:hilt-android-testing:$hilt_android_version"
+    testImplementation "org.robolectric:robolectric:$robolectric_version"
+    kaptTest "com.google.dagger:hilt-android-compiler:$hilt_android_version"
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_android_version"
+    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hilt_android_version"
+
+    testImplementation "org.mockito:mockito-core:3.11.2"
+    testImplementation "org.mockito:mockito-android:3.11.2"
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.1'
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+
+    //Gson
+    implementation "com.google.code.gson:gson:$gson_version"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.8.1"
+
+    //Google
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.1'
+    implementation 'com.google.android.gms:play-services-measurement-api:21.2.0'
+    implementation platform('com.google.firebase:firebase-bom:31.0.3')
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+
+    //Room database
+    implementation "androidx.room:room-runtime:2.4.3"
+    implementation "androidx.room:room-ktx:2.4.3"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    kapt "androidx.room:room-compiler:2.4.3"
+
+    //RxJava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation "io.reactivex.rxjava2:rxjava:2.2.20"
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+
+    // Dagger, Hilt
+    implementation "com.google.dagger:hilt-android:$hilt_android_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_android_version"
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_android_version"
+    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hilt_android_version"
+    kaptAndroidTest "com.google.dagger:dagger-compiler:$hilt_android_version"
+
+    //Permission
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
+    // HTML Helpers
+    implementation 'org.jsoup:jsoup:1.15.3'
+
+    //Amplitude
+    implementation 'com.amplitude:analytics-android:1.5.2'
+}

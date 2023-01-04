@@ -1,0 +1,429 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.PatientsLikeMe" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="bottomSheetDialogTheme">@style/Theme.Design.BottomSheetDialog</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+    <style name="ButtonDarkGreen">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40dp</item>
+        <item name="android:paddingStart">@dimen/_20dp</item>
+        <item name="android:paddingEnd">@dimen/_20dp</item>
+        <item name="android:paddingTop">@dimen/_4dp</item>
+        <item name="android:tag">14</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:background">@drawable/bg_button_dark_green</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="ButtonDarkGray">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40dp</item>
+        <item name="android:paddingStart">@dimen/_20dp</item>
+        <item name="android:paddingEnd">@dimen/_20dp</item>
+        <item name="android:paddingTop">@dimen/_4dp</item>
+        <item name="android:tag">14</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:background">@drawable/bg_button_dark_green_scale</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="ButtonDarkGreenBorder">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40dp</item>
+        <item name="android:paddingStart">@dimen/_20dp</item>
+        <item name="android:paddingEnd">@dimen/_20dp</item>
+        <item name="android:paddingTop">@dimen/_4dp</item>
+        <item name="android:tag">14</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:background">@drawable/bg_button_dark_green_border</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="ButtonDarkGreenBorderRightCurve">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40dp</item>
+        <item name="android:paddingStart">@dimen/_10dp</item>
+        <item name="android:paddingEnd">@dimen/_10dp</item>
+        <item name="android:paddingTop">@dimen/_4dp</item>
+        <item name="android:tag">14</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/bg_button_dark_green_border_right_curve</item>
+    </style>
+
+    <style name="TextView30">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:tag">14</item>
+        <item name="android:textSize">@dimen/_30sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TextViewBold26">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:tag">15</item>
+        <item name="android:textSize">@dimen/_26sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="TextView24">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:tag">14</item>
+        <item name="android:textSize">@dimen/_24sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TextViewBold24">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:tag">15</item>
+        <item name="android:textSize">@dimen/_24sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="TextViewBold22">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:tag">15</item>
+        <item name="android:textSize">@dimen/_22sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="TextView20">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:tag">14</item>
+        <item name="android:textSize">@dimen/_20sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TextViewBold20">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:tag">15</item>
+        <item name="android:textSize">@dimen/_20sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="TextView18">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:tag">14</item>
+        <item name="android:textSize">@dimen/_18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TextViewBold18">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:tag">15</item>
+        <item name="android:textSize">@dimen/_18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="TextView16">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:tag">14</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TextViewBold16">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:tag">15</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="TextView14">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:tag">14</item>
+        <item name="android:textSize">@dimen/_14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TextView13">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:tag">14</item>
+        <item name="android:textSize">@dimen/_13sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TextView12">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:tag">14</item>
+        <item name="android:textSize">@dimen/_12sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="editTextAuthModule">
+        <item name="android:textColorHint">@color/gray_5</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_38dp</item>
+        <item name="android:layout_marginStart">@dimen/_20dp</item>
+        <item name="android:layout_marginTop">@dimen/_5dp</item>
+        <item name="android:layout_marginEnd">@dimen/_20dp</item>
+        <item name="android:background">@drawable/bg_edittext_round_gray</item>
+        <item name="android:textSize">@dimen/_12dp</item>
+        <item name="singleLine">true</item>
+    </style>
+
+    <style name="TabLayoutText" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="ActiveText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/_14sp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="InactiveText">
+        <item name="android:textColor">@color/gray_scale</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_14sp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="DotLineView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_1dp</item>
+        <item name="android:background">@drawable/ic_dot_line</item>
+        <item name="android:layerType">software</item>
+    </style>
+
+    <style name="LineView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_1dp</item>
+        <item name="android:background">@drawable/ic_line</item>
+    </style>
+
+    <style name="RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:tag">14</item>
+        <item name="android:button">@drawable/bg_radio_button</item>
+        <item name="android:paddingStart">@dimen/_10dp</item>
+        <item name="android:gravity">top|start</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:background">@drawable/bg_bottom_sheet_parent</item>
+    </style>
+
+    <style name="SwitchButton" parent="TextAppearance.AppCompat.Widget.Switch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="android:tag">15</item>
+        <item name="track">@drawable/switch_custom_track</item>
+        <item name="android:thumb">@drawable/switch_custom_thumb</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40dp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:paddingStart">@dimen/_12dp</item>
+        <item name="android:paddingEnd">@dimen/_12dp</item>
+        <item name="android:paddingTop">@dimen/_4dp</item>
+        <item name="android:background">@drawable/bg_edittext_round_gray</item>
+        <item name="android:textSize">@dimen/_16dp</item>
+        <item name="android:textColor">@color/gray_dark_7</item>
+        <item name="android:textColorHint">@color/gray_dark_4</item>
+        <item name="maxLines">1</item>
+        <item name="android:tag">14</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="EditTextMultiLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">top|start</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:paddingStart">@dimen/_12dp</item>
+        <item name="android:paddingEnd">@dimen/_12dp</item>
+        <item name="android:paddingTop">@dimen/_4dp</item>
+        <item name="android:background">@drawable/bg_edittext_round_gray</item>
+        <item name="android:textSize">@dimen/_16dp</item>
+        <item name="android:textColorHint">@color/gray_dark_4</item>
+        <item name="maxLines">1</item>
+        <item name="android:tag">14</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Checkbox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:tag">14</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:button">@drawable/bg_check_box</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Spinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_42dp</item>
+        <item name="android:background">@drawable/bg_spinner_down_gray</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="android:textColor">@color/gray_dark_7</item>
+        <item name="android:textColorHint">@color/gray_dark_4</item>
+        <item name="maxLines">1</item>
+        <item name="android:tag">14</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="datepicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/calendar</item>
+        <item name="colorPrimaryDark">@color/calendar</item>
+        <item name="colorAccent">@color/calendar</item>
+    </style>
+
+    <style name="ToggleStyle">
+        <item name="android:textColor">@color/gray_5</item>
+        <item name="android:textColorSecondary">?attr/colorControlNormal</item>
+        <item name="android:minHeight">@dimen/_30dp</item>
+    </style>
+
+    <style name="PLMSwitch">
+        <item name="android:thumb">@drawable/thumb_selector</item>
+        <item name="track">@drawable/track_selector</item>
+    </style>
+    <!--    <style name="SwitchTextAppearance" parent="Widget.AppCompat.CompoundButton.Switch">-->
+    <!--        <item name="android:textColor">@color/black</item>-->
+    <!--        <item name="android:colorControlActivated">@color/black</item>-->
+    <!--        <item name="android:textColorPrimary">@color/black</item>-->
+    <!--        <item name="android:fontFamily">@font/poppins_semibold</item>-->
+    <!--        <item name="itemTextAppearanceInactive">@color/black</item>-->
+    <!--    </style>-->
+
+    <style name="CustomTabTextAppearance" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="UserChipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_background_color</item>
+        <item name="chipStrokeColor">@color/chip_stroke_color</item>
+        <item name="chipStrokeWidth">@dimen/_1dp</item>
+        <item name="chipCornerRadius">@dimen/_5dp</item>
+        <item name="closeIcon">@drawable/ic_close_chip</item>
+    </style>
+
+    <style name="UserChipText" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="HexagonCut" parent="">
+        <item name="cornerSizeTopRight">45dp</item>
+        <item name="cornerFamilyTopRight">cut</item>
+    </style>
+</resources>

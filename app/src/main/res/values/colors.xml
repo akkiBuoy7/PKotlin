@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#13C6AE</color>
+    <color name="colorPrimaryDark">#CDCDCD</color>
+    <color name="colorAccent">#000000</color>
+
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="teal">#13C6AE</color>
+    <color name="link_blue">#097CAA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_2">#CDCDCD</color>
+    <color name="gray_4">#757575</color>
+    <color name="gray_5">#5E5E5E</color>
+    <color name="gray_6">#404040</color>
+    <color name="black">#000000</color>
+
+    <color name="gray_scale">#C6CFCF</color>
+
+    <color name="gray_1">#F4F4F4</color>
+    <color name="gray_dark_3">#EAEFEF</color>
+    <color name="gray_dark_4">#9EA6A6</color>
+    <color name="gray_dark_5">#697171</color>
+    <color name="gray_dark_6">#3C4242</color>
+    <color name="gray_dark_7">#071414</color>
+    <color name="teal_dark">#184547</color>
+    <color name="teal_light">#C1EFE1</color>
+    <color name="blue_darker">#037B98</color>
+    <color name="blue_accent">#13C6AE</color>
+    <color name="blue">#07BFEB</color>
+    <color name="purple">#8EB4ED</color>
+    <color name="pink">#F9ABAB</color>
+    <color name="orange">#F2955F</color>
+    <color name="orange_dark">#FC833E</color>
+    <color name="pink_dark">#F86363</color>
+    <color name="blue_light">#E6F9F3</color>
+    <color name="gold">#FFDE7C</color>
+    <color name="onboarding">#F7FAFA</color>
+
+    <color name="parentLayoutColor">@color/onboarding</color>
+    <color name="memberCountTextColor">#697171</color>
+    <color name="icCheckFillColor">#00000000</color>
+    <color name="icCheckStrokeColor">#13C6AE</color>
+    <color name="teal_darker">#2A757A</color>
+    <color name="green_success">#81C216</color>
+    <color name="red_error">#E91C1C</color>
+    <color name="gold_dark">#FEBE19</color>
+    <color name="data_moderate">#A0CD53</color>
+    <color name="data_negative_severe">#E23737</color>
+    <color name="data_positive_moderate">#A0CD53</color>
+    <color name="data_positive_major">#81C216</color>
+    <color name="quantitative_neutral">#FEE019</color>
+    <color name="calendar">@color/gray_6</color>
+    <color name="data_negative_mild">#F9ABAB</color>
+
+    <color name="leader_badge_color">#008573</color>
+    <color name="bottom_sheet_translucent_bg">#B3FFFFFF</color>
+
+    <color name="private_group_bg">#13304E</color>
+    <color name="transparent">#00000000</color>
+    <color name="backgroundColor">#F5F5F5</color>
+
+    <color name="bottomBarGreen">#13C6AE</color>
+    <color name="bottomBarBlue">#8EB4ED</color>
+    <color name="bottomBarPink">#F86363</color>
+    <color name="bottomBarOrange">#FC833E</color>
+</resources>

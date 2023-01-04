@@ -1,0 +1,55 @@
+{
+  "success": true,
+  "message": "",
+  "data": {
+    "user": {
+      "id": 959016,
+      "email": "dummyuser1@plm.com",
+      "login": "dummy_user_plm_1",
+      "full_name": "dummy_user_plm_1",
+      "sex": null,
+      "canned_genders": [],
+      "additional_gender": null,
+      "avatar_url": "https:/assets/portrait_default-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+      "birth_date": "1997-10-18",
+      "city": null,
+      "state": null,
+      "postcode": null,
+      "ethnicity_id": null,
+      "education_level_id": null,
+      "age_and_address_text": "25 years old",
+      "primary_condition_text": null,
+      "primary_interest": null,
+      "secondary_interests": [],
+      "health_insurance_type_id": null,
+      "military_status": null,
+      "military_branch_id": null,
+      "military_rank": null,
+      "military_job": null,
+      "bio": {
+        "content": null,
+        "brief_bio": null
+      },
+      "accreditations": [],
+      "profile_colour": null,
+      "communities": [],
+      "quick_stats": {
+        "since": "Member since Nov  8, 2022",
+        "followers": "0 followers",
+        "following": "Following 0 members",
+        "helpful": "0 Helpful marks received"
+      },
+      "condition_infos": [],
+      "treatment_histories": []
+    },
+    "data": {
+      "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjZKUUJYZjJmLVNVc0RYOTd4cU54UERyVFNPUEtLMmpNVVdnYlZEQzF6YzQifQ.eyJpc3MiOiJodHRwczovL3dhbG0tdGVhbS5wbG0uc3RhZ2UucHJlcHJvZC5wYXRpZW50c2xpa2VtZS5jb20vIiwianRpIjoieWZ3S1ZBUktjYlpmUGRCa3dsX09GWnpRa0VMcGltc2lNZyIsImlhdCI6MTY2Nzg5Nzg3MywibmJmIjoxNjY3ODk3ODczLCJleHAiOjE2Njc4OTc5MzMsImF1ZCI6WyJwbG1fb2F1dGhfY2xpZW50IiwiaHR0cHM6Ly93YWxtLXRlYW0ucGxtLnN0YWdlLnByZXByb2QucGF0aWVudHNsaWtlbWUuY29tL29hdXRoL2ludHJvc3BlY3QiXSwiYXpwIjoic3NKMmNjeW1QYnVFVkJmODJ5WGRmbHN6WV9xUXNmeFBfVDE0eGFhVnJ6TSIsInNjb3BlIjoiaW5mbyIsInN1YiI6Ijk1OTAxNiIsInN1YmplY3Rfcm9sZXMiOiJwYXRpZW50In0.ofrcg4ha-PU0WRF23szEQrfbRQY2FVYtr7SGbJBkyfVV7ZUnTf9udxCXBh7QkqyXjbhzkWBJ8ySuIOgBDZUEanC59RhvzDfU2aUnhLZx03B77_rhGG4DDFKU5f9hiyhnwSmDiIkJ3-ALLa-CdQNPt6jRmG5ZW0nYwvAmX46kqq2bOa4H49Km_4-dZXBMSbqn6rA8ek_aj4eKLeS4dseM6lg_wMZXzHSApKk6kXZIlccEQ8iiXkQTmb9SOdDdJ-SZjpkbsd7ZSFgf4NrUFACXFJJc9yNRBcOhmmhLU7iwmjfRBWXotRBE9e7nddZJBNaFy_94w88GCbwzTvCNkJUKSvebigvtJd8J4rXwoVw-t2Y4DrFhXK5lKAR1bes1C4fW1fJ1Usydd5AXj1paF9xfeSl_KKlblT6JooTx9zqgcoJohFHhnrsOEky46fMP7SJwBoVzS9HeOD9TAIRh5VQNywEyXYqz5ZcoMSY63bzOL_oP2tmEXcf4a8S9qVVzbAUTIdn6TcTd4E_cEr8pvuZJ9soJJwEkhtAQdwO8qfqml8XFMm4t9fs55DivWEERz51VjNuLhRvU1tATkENS4c3QyH9CyuKoabGwtSA_00sp6LSEIL2zC01McjnKRpd_uFm6L7FtLDdqcr50HlEXvMzpK0r6u8iCH34njXnJUuVY5iM",
+      "token_type": "Bearer",
+      "expires_in": 60,
+      "refresh_token": "CAj9bSgEyJ6Q6YlJ88BS1FXX44h-vmrO-STy8Cz_8EU",
+      "scope": "info",
+      "created_at": 1667897873
+    }
+  },
+  "meta": {}
+}

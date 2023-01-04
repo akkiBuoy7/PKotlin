@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "message": "Feature_Flags",
+  "data": {
+    "feature_flags": {
+      "android_sample_test": false,
+      "android_login_test": false,
+      "android_daily_me_persistent": false,
+      "android_app_search": false,
+      "android_development": false,
+      "android_login": true,
+      "android_menu": true,
+      "android_community_groups": true,
+      "android_signupandonboarding": true,
+      "android_email_password": true,
+      "android_privacy_settings": true,
+      "android_blocked_members": true,
+      "android_my_conditions": true,
+      "android_mobile_promo": false,
+      "android_events": true,
+      "android_members": true,
+      "android_edit_profile": true,
+      "android_notification_settings": true,
+      "android_notifications": true,
+      "android_private_messaging": true,
+      "android_discussions": true,
+      "android_followings": true,
+      "android_home_page": true,
+      "android_resources": true,
+      "android_announcements": true
+    }
+  },
+  "meta": {
+  }
+}

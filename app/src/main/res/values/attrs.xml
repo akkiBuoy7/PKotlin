@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="dropDown">
+        <attr name="selected_item" format="string" />
+        <attr name="selected_position" format="integer" />
+        <attr name="title" format="string" />
+        <attr name="placeholder_" format="string" />
+        <attr name="isShowDrawable_" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="SearchDropdown">
+        <attr name="selected_text" format="string" />
+        <attr name="selected_item_position" format="integer" />
+        <attr name="search_popup_title" format="string" />
+        <attr name="search_threshold" format="integer" />
+        <attr name="placeholder" format="string" />
+        <attr name="isShowDrawable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="Expander">
+        <attr name="itemTitle" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="DatePicker">
+        <attr name="selected_value" format="string" />
+        <attr name="header_label_text" format="string" />
+        <attr name="selection_type" format="integer" />
+    </declare-styleable>
+    <attr name="siArrowPosition">
+        <enum name="left" value="0" />
+        <enum name="right" value="1" />
+    </attr>
+    <attr name="siBorderType">
+        <enum name="stroke" value="0" />
+        <enum name="fill" value="1" />
+    </attr>
+    <attr name="siStrokeCap">
+        <enum name="butt" value="0" />
+        <enum name="round" value="1" />
+        <enum name="square" value="2" />
+    </attr>
+    <attr name="siStrokeJoin">
+        <enum name="bevel" value="0" />
+        <enum name="miter" value="1" />
+        <enum name="round" value="2" />
+    </attr>
+    <declare-styleable name="ShaderImageView">
+        <attr name="siSquare" format="boolean" />
+        <attr name="siBorderColor" format="color" />
+        <attr name="siBorderWidth" format="dimension" />
+        <attr name="siBorderAlpha" format="float" />
+        <attr name="siForeground" format="integer|reference" />
+
+        <!-- Rounded Image View -->
+        <attr name="siRadius" format="dimension" />
+
+        <!--BubbleImageView-->
+        <attr name="siArrowPosition" />
+        <attr name="siTriangleHeight" format="dimension" />
+
+        <!--PorterImageView-->
+        <attr name="siShape" format="integer|reference" />
+
+        <!--ShaderImageView-->
+        <attr name="siBorderType" />
+        <attr name="siStrokeCap" />
+        <attr name="siStrokeJoin" />
+        <attr name="siStrokeMiter" format="dimension" />
+
+    </declare-styleable>
+
+    <declare-styleable name="RadioDropdown">
+        <attr name="selection" format="string" />
+        <attr name="header" format="string" />
+        <attr name="dropdownTitle" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="NumberPicker">
+        <attr name="min" format="integer" />
+        <attr name="max" format="integer" />
+        <attr name="value" format="integer" />
+        <attr name="enabledValue" format="boolean" />
+        <attr name="unit" format="integer" />
+        <attr name="valueText" format="string" />
+        <attr name="custom_layout" format="reference" />
+        <attr name="focusable" format="boolean" />
+        <attr name="showDecimals" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="OptionButtons">
+        <attr name="count" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="MultiStateToggleButton">
+        <attr name="values" format="reference" />
+        <attr name="mstbPrimaryColor" format="reference" />
+        <attr name="mstbSecondaryColor" format="reference" />
+        <attr name="mstbColorPressedText" format="reference" />
+        <attr name="mstbColorPressedBackground" format="reference" />
+        <attr name="mstbColorPressedBackgroundResource" format="reference" />
+        <attr name="mstbColorNotPressedText" format="reference" />
+        <attr name="mstbColorNotPressedBackground" format="reference" />
+        <attr name="mstbColorNotPressedBackgroundResource" format="reference" />
+        <attr name="textlines" format="integer" />
+        <attr name="isToggle" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="MessageView">
+        <attr name="messageString" format="string" />
+        <attr name="isSuccess" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleButton">
+        <attr name="labelString" format="string" />
+        <attr name="srcImage" format="reference" />
+        <attr name="selectionColor" format="reference" />
+        <attr name="selectionColorGray" format="reference" />
+        <attr name="imageSize" format="integer" />
+        <attr name="labelTextSize" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CalendarView">
+        <attr name="headerColor" format="color" />
+        <attr name="headerLabelColor" format="color" />
+        <attr name="previousButtonSrc" format="integer" />
+        <attr name="forwardButtonSrc" format="integer" />
+        <attr name="todayLabelColor" format="color" />
+        <attr name="selectionBgColor" format="color" />
+        <attr name="selectionBgColorGray" format="color" />
+        <attr name="selectionLabelColor" format="color" />
+        <attr name="disabledDaysLabelsColor" format="color" />
+        <attr name="highlightedDaysLabelsColor" format="color" />
+        <attr name="pagesColor" format="color" />
+        <attr name="abbreviationsBarColor" format="color" />
+        <attr name="abbreviationsLabelsColor" format="color" />
+        <attr name="abbreviationsLabelsSize" format="dimension" />
+        <attr name="daysLabelsColor" format="color" />
+        <attr name="anotherMonthsDaysLabelsColor" format="color" />
+        <attr name="eventsEnabled" format="boolean" />
+        <attr name="swipeEnabled" format="boolean" />
+        <attr name="selectionDisabled" format="boolean" />
+        <attr name="selectionBetweenMonthsEnabled" format="boolean" />
+        <attr name="maximumDaysRange" format="integer" />
+        <attr name="typeface" format="integer" />
+        <attr name="todayTypeface" format="integer" />
+        <attr name="type" />
+        <attr name="firstDayOfWeek" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundedBarChart">
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+
+    <attr name="type" format="enum">
+        <enum name="classic" value="0" />
+        <enum name="one_day_picker" value="1" />
+        <enum name="many_days_picker" value="2" />
+        <enum name="range_picker" value="3" />
+    </attr>
+
+    <attr name="firstDayOfWeek" format="enum">
+        <enum name="sunday" value="1" />
+        <enum name="monday" value="2" />
+        <enum name="tuesday" value="3" />
+        <enum name="wednesday" value="4" />
+        <enum name="thursday" value="5" />
+        <enum name="friday" value="6" />
+        <enum name="saturday" value="7" />
+    </attr>
+
+    <declare-styleable name="RoundishImageView">
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="roundedCorners">
+            <flag name="topLeft" value="1" />
+            <flag name="topRight" value="2" />
+            <flag name="bottomRight" value="4" />
+            <flag name="bottomLeft" value="8" />
+            <flag name="all" value="15" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="HexagonImage">
+        <attr name="hexagonColor" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SimpleSwipeMenuLayout">
+        <attr name="menuSide" format="enum">
+            <enum name="Left" value="1"/>
+            <enum name="Right" value="0"/>
+        </attr>
+        <attr name="dynamicMenuWidth" format="boolean"/>
+    </declare-styleable>
+</resources>

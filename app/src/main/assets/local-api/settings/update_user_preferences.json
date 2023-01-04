@@ -1,0 +1,24 @@
+{
+  "user_preference": {
+    "privacy_settings": {
+      "visible_to": "own_controlled",
+      "own_controlled": [
+        {
+          "controllable_type": "conditions",
+          "controllable_id": "1",
+          "permission_level": "personal"
+        },
+        {
+          "controllable_type": "conditions",
+          "controllable_id": "2",
+          "permission_level": "plm"
+        },
+        {
+          "controllable_type": "symptoms",
+          "controllable_id": "1",
+          "permission_level": "plm"
+        }
+      ]
+    }
+  }
+}

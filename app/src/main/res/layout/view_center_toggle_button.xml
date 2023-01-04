@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plm.patientslikeme2.utils.usercontrol.UserButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mstb_button_view"
+    style="@style/ToggleStyle"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_1dp"
+    android:layout_weight="1"
+    android:ellipsize="end"
+    android:lines="3"
+    android:padding="2dp"
+    android:tag="12"
+    android:textColor="@color/black"
+    android:textAllCaps="false"
+    android:textSize="@dimen/_12sp" />

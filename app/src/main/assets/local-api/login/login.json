@@ -1,0 +1,9 @@
+{
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjJDNGtHY2pZWFRZa09GdmVOeHcyRWZSY3k4YUctcWpZY0dDRVVqNTB4d0EifQ.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvIiwianRpIjoiZW5UM2pheUJiUExOS0NuVm5NM0Exa2duMHgxZ0FLWm9iUSIsImlhdCI6MTYyMDYzODc1MSwibmJmIjoxNjIwNjM4NzUxLCJleHAiOjE2MjA3MjUxNTEsImF1ZCI6WyJwbG1fb2F1dGhfY2xpZW50IiwiaHR0cDovL2xvY2FsaG9zdDozMDAwL29hdXRoL2ludHJvc3BlY3QiXSwiYXpwIjoiaW5zdGFudG1lLWZvci1pb3MtdWlkIiwic2NvcGUiOiJpbmZvIiwic3ViIjoiOTI1NTc5Iiwic3ViamVjdF9yb2xlcyI6ImFkbWluIn0.MyrIkiyp6-l09YbRONhdfVSNOgqRyYDPUCSNDpShOIdEwQxIxDKLSdfcOVISIuzECJnUc2-rtJCCDDEpXplFha0fZpp7rGSQ_fG8dGzg5Y0lGE3r0FcRw3gtVcN38I9xc6r6SOPynKjpYm1XPPv838pZ_j9jHPNqFTFPBH2S9r1dC3mLFxrBrBIH9NqcMDSIXHbzFUKCcbIOI7NycMOiLP2bGm19jShH5GMawGNPRPIEfu3di2wSu2iro_nZFqU1RkRhnsvgHfaiyEWjW9hlDk908LoJeF8rblh5CdCsxuwUth2dFU60cBtXcIzXxiZZS83PcO76s7LhG_WZuPoPDw",
+    "token_type": "Bearer",
+    "expires_in": 86400,
+    "refresh_token": "-EdbCE4Y3jjq3KBOQcw4xYIkfToDbDCsFi7VnIzT8bs",
+    "scope": "mobile",
+    "signup_step": "member_home",
+    "created_at": 1620638751
+}

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="handlers"
+            type="plm.patientslikeme2.ui.main.view.dialog.profile.AvatarImageOptionsDialog" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_sheet_parent"
+        android:backgroundTint="@color/white"
+        android:paddingHorizontal="@dimen/_16dp"
+        android:paddingTop="@dimen/_16dp"
+        android:paddingBottom="@dimen/_16dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                style="@style/TextViewBold16"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/options" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="end"
+                android:contentDescription="@null"
+                android:onClick="@{handlers::onItemClicked}"
+                android:src="@drawable/ic_close_dark_green"
+                app:tint="@color/gray_dark_4" />
+        </RelativeLayout>
+
+
+        <plm.patientslikeme2.utils.usercontrol.UserTextView
+            android:id="@+id/tv_gallery"
+            style="@style/TextView16"
+            android:gravity="center|start"
+            android:onClick="@{handlers::onItemClicked}"
+            android:paddingHorizontal="@dimen/_16dp"
+            android:paddingVertical="@dimen/_16dp"
+            android:text="@string/gallery"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_header" />
+
+        <View
+            android:id="@+id/divider_line_1"
+            style="@style/DotLineView"
+            android:layout_marginHorizontal="@dimen/_8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gallery" />
+
+        <plm.patientslikeme2.utils.usercontrol.UserTextView
+            android:id="@+id/tv_remove_photo"
+            style="@style/TextView16"
+            android:gravity="center|start"
+            android:onClick="@{handlers::onItemClicked}"
+            android:paddingHorizontal="@dimen/_16dp"
+            android:paddingVertical="@dimen/_16dp"
+            android:text="@string/remove_photo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_line_1" />
+
+        <View
+            android:id="@+id/divider_line_2"
+            style="@style/DotLineView"
+            android:layout_marginHorizontal="@dimen/_8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_remove_photo" />
+
+        <plm.patientslikeme2.utils.usercontrol.UserTextView
+            android:id="@+id/tv_cancel"
+            style="@style/TextViewBold16"
+            android:gravity="center"
+            android:onClick="@{handlers::onItemClicked}"
+            android:paddingHorizontal="@dimen/_16dp"
+            android:paddingVertical="@dimen/_16dp"
+            android:text="@string/cancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_line_2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plm.patientslikeme2.utils.usercontrol.UserTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/text1"
+    style="@style/TextView16"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="marquee"
+    android:gravity="center|start"
+    android:paddingStart="@dimen/_12dp"
+    android:paddingTop="@dimen/_8dp"
+    android:paddingEnd="@dimen/_12dp"
+    android:paddingBottom="@dimen/_10dp"
+    android:singleLine="true"
+    android:tag="9"
+    android:textColor="@color/gray_dark_4"
+    tools:text="@string/hint_please_select" />

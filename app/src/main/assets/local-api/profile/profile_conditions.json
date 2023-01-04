@@ -1,0 +1,85 @@
+{
+    "success" : true,
+    "message" : "",
+    "data" : {
+        "conditions" : [
+            {
+                "id" : 1,
+                "name" : "Test condition 1",
+                "symptoms" : [
+                    {
+                        "id" : 1,
+                        "name" : "Symptom 1",
+                        "severity" : "Severe"
+                    },
+                    {
+                        "id" : 2,
+                        "name" : "Symptom 2",
+                        "severity" : "Mild"
+                    },
+                    {
+                        "id" : 2,
+                        "name" : "Symptom 3",
+                        "severity" : "None"
+                    }
+                ],
+                "treatments" : [
+                    {
+                        "id" : 1,
+                        "name" : "Treatment 1",
+                        "effectiveness" : "Major"
+                    },
+                    {
+                        "id" : 2,
+                        "name" : "Treatment 2",
+                        "effectiveness" : "Moderate"
+                    },
+                    {
+                        "id" : 3,
+                        "name" : "Treatment 3",
+                        "effectiveness" : "Major"
+                    }
+                ]
+            },
+            {
+                "id" : 1,
+                "name" : "Test condition 2",
+                "symptoms" : [
+                    {
+                        "id" : 4,
+                        "name" : "Symptom 4",
+                        "severity" : "Severe"
+                    },
+                    {
+                        "id" : 5,
+                        "name" : "Symptom 5",
+                        "severity" : "Mild"
+                    },
+                    {
+                        "id" : 6,
+                        "name" : "Symptom 6",
+                        "severity" : "None"
+                    }
+                ],
+                "treatments" : [
+                    {
+                        "id" : 4,
+                        "name" : "Treatment 4",
+                        "effectiveness" : "Major"
+                    },
+                    {
+                        "id" : 5,
+                        "name" : "Treatment 5",
+                        "effectiveness" : "Moderate"
+                    },
+                    {
+                        "id" : 6,
+                        "name" : "Treatment 6",
+                        "effectiveness" : "Major"
+                    }
+                ]
+            }
+        ]
+    },
+    "meta" : {}
+}

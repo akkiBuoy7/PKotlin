@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "message": "null",
+  "data": [
+    {
+      "id": 3444,
+      "name": "Cataflam",
+      "treatment_category_id": 1
+    },
+    {
+      "id": 9885,
+      "name": "Catalyn",
+      "treatment_category_id": 3
+    }
+  ]
+}

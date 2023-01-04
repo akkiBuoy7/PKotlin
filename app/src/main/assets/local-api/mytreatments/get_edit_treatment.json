@@ -1,0 +1,114 @@
+{
+  "success": true,
+  "message": null,
+  "data": {
+    "treatment_history": {
+      "id": 2440095,
+      "treatment_id": 30223,
+      "name": "Breast Augmentation With Implant",
+      "purposes": [
+        {
+          "attribution_id": 9675672,
+          "name": "Amyotrophic lateral sclerosis"
+        }
+      ],
+      "privacy": "plm",
+      "treatment_category": {
+        "id": 6,
+        "name": "Procedures",
+        "default_dosage_units": [
+          {
+            "id": 1,
+            "description": "milligram(s)"
+          },
+          {
+            "id": 3,
+            "description": "gram(s)"
+          },
+          {
+            "id": 2,
+            "description": "milliliter(s)"
+          },
+          {
+            "id": 5,
+            "description": "hour(s)"
+          },
+          {
+            "id": 107,
+            "description": "Unspecified"
+          },
+          {
+            "id": 108,
+            "description": "cap"
+          },
+          {
+            "id": 109,
+            "description": "tab"
+          },
+          {
+            "id": 110,
+            "description": "patches"
+          },
+          {
+            "id": 111,
+            "description": "puffs"
+          },
+          {
+            "id": 112,
+            "description": "mL"
+          },
+          {
+            "id": 113,
+            "description": "%"
+          },
+          {
+            "id": 114,
+            "description": "mg/m2"
+          }
+        ],
+        "dosage_units": [],
+        "frequency_units": [
+          {
+            "id": 1,
+            "display_name": "Daily"
+          },
+          {
+            "id": 2,
+            "display_name": "Twice daily"
+          },
+          {
+            "id": 3,
+            "display_name": "One time"
+          },
+          {
+            "id": 4,
+            "display_name": "As needed"
+          }
+        ]
+      },
+      "reminder_notifications_attributes": [
+        {
+          "is_notify": true,
+          "notify_time": "02:00"
+        }
+      ],
+      "treatment_dosage_history": [
+        {
+          "id": 866414,
+          "start_date": "2018-02-04",
+          "drugdb_frequency_unit_id": 1,
+          "doses": [
+            {
+              "quantity": "1.0",
+              "structured_dosage": null,
+              "strength_num_amount": "1.0",
+              "strength_num_unit_id": 6,
+              "as_needed": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meta": {}
+}

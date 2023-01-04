@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/onboarding"
+        tools:context=".ui.main.view.fragment.signup.SignupFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/ll_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:paddingTop="@dimen/_50dp"
+                    android:src="@drawable/ic_logo" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextView24"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:gravity="center"
+                    android:text="@string/create_an_account" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView13"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/already_member"
+                        android:textColor="@color/gray_dark_7" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_already_member"
+                        style="@style/TextView13"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_4dp"
+                        android:gravity="center"
+                        android:text="@string/sign_in"
+                        android:textColor="@color/blue_darker" />
+                </LinearLayout>
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextView16"
+                    android:layout_marginHorizontal="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:text="@string/email"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_new_password" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserEditText
+                    android:id="@+id/et_email"
+                    style="@style/EditText"
+                    android:layout_height="@dimen/_42dp"
+                    android:layout_marginHorizontal="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_4dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_email_details"
+                    style="@style/TextView13"
+                    android:layout_marginHorizontal="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:text="@string/email_details"
+                    android:textColor="@color/gray_dark_5" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextView16"
+                    android:layout_marginHorizontal="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:text="@string/username"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_new_password" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserEditText
+                    android:id="@+id/et_username"
+                    style="@style/EditText"
+                    android:layout_height="@dimen/_42dp"
+                    android:layout_marginHorizontal="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_4dp"
+                    android:imeOptions="actionNext" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_username_details"
+                    style="@style/TextView13"
+                    android:layout_marginHorizontal="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:text="@string/username_details"
+                    android:textColor="@color/gray_dark_5" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:orientation="horizontal">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView16"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/llPasswordStrength"
+                        android:text="@string/password" />
+
+                    <LinearLayout
+                        android:id="@+id/llPasswordStrength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <plm.patientslikeme2.utils.usercontrol.UserTextView
+                            android:id="@+id/tvStrength"
+                            style="@style/TextView13"
+                            android:layout_width="wrap_content"
+                            android:layout_marginEnd="@dimen/_5dp"
+                            android:text="@string/strength_col"
+                            android:textColor="@color/gray_dark_5" />
+
+                        <plm.patientslikeme2.utils.usercontrol.UserTextView
+                            android:id="@+id/tvPasswordStrength"
+                            style="@style/TextView13"
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:text="@string/low"
+                            android:textColor="@color/red_error" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_42dp"
+                    android:layout_marginTop="@dimen/_4dp"
+                    android:orientation="vertical">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserEditText
+                        android:id="@+id/et_password"
+                        style="@style/EditText"
+                        android:layout_height="@dimen/_42dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginHorizontal="@dimen/_20dp"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword" />
+
+                    <ImageView
+                        android:id="@+id/iv_visible_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@null"
+                        android:paddingStart="@dimen/_0dp"
+                        android:paddingEnd="@dimen/_28dp"
+                        android:src="@drawable/ic_visibility" />
+                </RelativeLayout>
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_password_details"
+                    style="@style/TextView13"
+                    android:layout_marginHorizontal="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:text="@string/invalid_password_length"
+                    android:textColor="@color/gray_dark_5" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextViewBold16"
+                    android:layout_marginHorizontal="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:text="@string/date_of_birth"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_new_password" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <plm.patientslikeme2.utils.usercontrol.UserTextView
+                            style="@style/TextView16"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_10dp"
+                            android:text="@string/month" />
+
+                        <plm.patientslikeme2.utils.usercontrol.UserTextView
+                            android:id="@+id/tv_month"
+                            style="@style/Spinner"
+                            android:layout_height="@dimen/_42dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4dp"
+                            android:gravity="center|start"
+                            android:inputType="date"
+                            android:paddingHorizontal="@dimen/_16dp"
+                            android:paddingTop="@dimen/_4dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <plm.patientslikeme2.utils.usercontrol.UserTextView
+                            style="@style/TextView16"
+                            android:layout_marginHorizontal="@dimen/_10dp"
+                            android:text="@string/day" />
+
+                        <plm.patientslikeme2.utils.usercontrol.UserTextView
+                            android:id="@+id/tv_day"
+                            style="@style/Spinner"
+                            android:layout_height="@dimen/_42dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4dp"
+                            android:gravity="center|start"
+                            android:inputType="date"
+                            android:paddingHorizontal="@dimen/_16dp"
+                            android:paddingTop="@dimen/_4dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <plm.patientslikeme2.utils.usercontrol.UserTextView
+                            style="@style/TextView16"
+                            android:layout_marginHorizontal="@dimen/_10dp"
+                            android:text="@string/year" />
+
+                        <plm.patientslikeme2.utils.usercontrol.UserTextView
+                            android:id="@+id/tv_year"
+                            style="@style/Spinner"
+                            android:layout_height="@dimen/_42dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4dp"
+                            android:gravity="center|start"
+                            android:inputType="date"
+                            android:paddingHorizontal="@dimen/_16dp"
+                            android:paddingTop="@dimen/_4dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_dob_details"
+                    style="@style/TextView13"
+                    android:layout_marginHorizontal="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:text="@string/dob_details"
+                    android:textColor="@color/gray_dark_5" />
+
+                <LinearLayout
+                    android:id="@+id/ll_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_error_red" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_error"
+                        style="@style/TextView16"
+                        android:layout_gravity="center|start"
+                        android:layout_marginStart="@dimen/_2dp"
+                        android:gravity="center|start"
+                        android:paddingTop="@dimen/_4dp"
+                        tools:text="@string/invalid_password" />
+                </LinearLayout>
+
+                <plm.patientslikeme2.utils.usercontrol.UserCheckBox
+                    android:id="@+id/cb_joining_caregiver"
+                    style="@style/Checkbox"
+                    android:layout_marginHorizontal="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:gravity="top|start"
+                    android:paddingHorizontal="@dimen/_10dp"
+                    android:text="@string/joining_as_caregiver" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserCheckBox
+                    android:id="@+id/cb_terms_conditions"
+                    style="@style/Checkbox"
+                    android:layout_marginHorizontal="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginBottom="@dimen/_24dp"
+                    android:gravity="top|start"
+                    android:paddingHorizontal="@dimen/_10dp"
+                    android:text="@string/plm_terms_conditions" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/_16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_dot_active" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_dot_inactive" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_dot_inactive" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <plm.patientslikeme2.utils.usercontrol.UserButton
+                    android:id="@+id/btn_back"
+                    style="@style/ButtonDarkGreenBorder"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:layout_marginBottom="@dimen/_12dp"
+                    android:text="@string/back" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserButton
+                    android:id="@+id/btn_create_account"
+                    style="@style/ButtonDarkGray"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_12dp"
+                    android:background="@drawable/bg_button_dark_green_scale"
+                    android:enabled="false"
+                    android:text="@string/create_an_account"
+                    android:textColor="@color/gray_scale" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

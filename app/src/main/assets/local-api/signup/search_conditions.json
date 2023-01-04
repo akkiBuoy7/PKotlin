@@ -1,0 +1,67 @@
+{
+  "success": true,
+  "message": null,
+  "data": [
+    {
+      "id": 9,
+      "name": "amyotrophic lateral sclerosis"
+    },
+    {
+      "id": 352,
+      "name": "perennial allergy"
+    },
+    {
+      "id": 11,
+      "name": "alcohol use disorder"
+    },
+    {
+      "id": 157,
+      "name": "alkaptonuria"
+    },
+    {
+      "id": 449,
+      "name": "non-alcoholic fatty liver disease"
+    },
+    {
+      "id": 343,
+      "name": "food allergy"
+    },
+    {
+      "id": 2367,
+      "name": "alexithymia"
+    },
+    {
+      "id": 351,
+      "name": "seasonal allergy"
+    },
+    {
+      "id": 353,
+      "name": "chemical/venom allergy"
+    },
+    {
+      "id": 357,
+      "name": "allergic rhinitis"
+    },
+    {
+      "id": 528,
+      "name": "Alagille syndrome"
+    },
+    {
+      "id": 1117,
+      "name": "Albright syndrome"
+    },
+    {
+      "id": 1625,
+      "name": "Alexander disease"
+    },
+    {
+      "id": 421,
+      "name": "non-allergic rhinitis"
+    },
+    {
+      "id": 158,
+      "name": "oculocutaneous albinism"
+    }
+  ],
+  "meta": {}
+}

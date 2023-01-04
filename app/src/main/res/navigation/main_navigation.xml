@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/navigation_home_to_community_all_groups"
+            app:destination="@id/community_all_groups" />
+
+        <action
+            android:id="@+id/navigation_home_to_group_fragment"
+            app:destination="@id/group_fragment">
+            <argument
+                android:name="GROUP_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="GROUP_PRIVATE"
+                android:defaultValue="false"
+                app:argType="boolean" />
+        </action>
+        <action
+            android:id="@+id/navigation_home_to_group_discussion_thread"
+            app:destination="@id/community_group_discussion_thread">
+            <argument
+                android:name="DISCUSSION_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="GROUP_TITLE"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="DISCUSSION_DETAILS"
+                android:defaultValue="@null"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_community"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.community.CommunityFragment"
+        android:label="@string/title_community"
+        tools:layout="@layout/fragment_community">
+        <action
+            android:id="@+id/action_navigation_community_to_community_all_groups"
+            app:destination="@id/community_all_groups" />
+        <action
+            android:id="@+id/community_to_group_fragment"
+            app:destination="@id/group_fragment">
+            <argument
+                android:name="GROUP_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="GROUP_PRIVATE"
+                android:defaultValue="false"
+                app:argType="boolean" />
+        </action>
+        <action
+            android:id="@+id/community_to_user_profile"
+            app:destination="@id/user_profile">
+            <argument
+                android:name="USER_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_navigation_community_to_event_details"
+            app:destination="@id/event_details" />
+        <action
+            android:id="@+id/navigation_community_like_members_to_messages_conversation"
+            app:destination="@id/navigation_messaging_conversation"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/event_details"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.community.events.EventDetailsFragment"
+        android:label="fragment_event_details"
+        tools:layout="@layout/fragment_event_details" />
+
+    <fragment
+        android:id="@+id/navigation_my_health"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.myhealth.MyHealthFragment"
+        android:label="@string/title_my_health"
+        tools:layout="@layout/fragment_my_health" />
+
+    <fragment
+        android:id="@+id/navigation_learning"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.learning.LearningFragment"
+        android:label="@string/title_learning"
+        tools:layout="@layout/fragment_learning" />
+
+    <fragment
+        android:id="@+id/navigation_following"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.following.FollowingFragment"
+        android:label="@string/nav_menu_following"
+        tools:layout="@layout/fragment_following">
+        <action
+            android:id="@+id/navigation_following_to_group_discussion_thread"
+            app:destination="@id/community_group_discussion_thread">
+            <argument
+                android:name="DISCUSSION_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="GROUP_TITLE"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="DISCUSSION_DETAILS"
+                android:defaultValue="@null"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/navigation_following_to_tag_details_fragment"
+            app:destination="@id/tag_details_fragment" />
+
+        <action
+            android:id="@+id/navigation_following_to_resource_details"
+            app:destination="@id/resource_details" />
+
+        <action
+            android:id="@+id/navigation_following_to_user_profile"
+            app:destination="@id/user_profile">
+            <argument
+                android:name="USER_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/resource_details"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.community.resource.ResourceDetailsFragment"
+        android:label="fragment_resource_details"
+        tools:layout="@layout/fragment_resource_details" />
+
+    <fragment
+        android:id="@+id/tag_details_fragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.following.TagDetailsFragment"
+        android:label="fragment_tag_details"
+        tools:layout="@layout/fragment_tag_details">
+
+        <action
+            android:id="@+id/tag_details_fragment_to_group_discussion_thread"
+            app:destination="@id/community_group_discussion_thread">
+            <argument
+                android:name="DISCUSSION_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="GROUP_TITLE"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="DISCUSSION_DETAILS"
+                android:defaultValue="@null"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_my_conditions"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.conditions.MyConditionsFragment"
+        android:label="@string/nav_menu_my_conditions"
+        app:popUpToInclusive="true"
+        tools:layout="@layout/fragment_my_conditions">
+        <action
+            android:id="@+id/action_my_conditions_to_condition_details"
+            app:destination="@id/navigation_condition_details" />
+
+        <argument
+            android:name="CONDITION_ID"
+            android:defaultValue="@null"
+            app:argType="string" />
+        <argument
+            android:name="CONDITION_NAME"
+            android:defaultValue="@null"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_condition_details"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.conditions.ConditionDetailsFragment"
+        android:label="@string/condition_details"
+        app:popUpToInclusive="true"
+        tools:layout="@layout/fragment_condition_details" />
+
+    <fragment
+        android:id="@+id/navigation_my_treatments"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.treatments.MyTreatmentsFragment"
+        android:label="@string/nav_menu_my_treatments"
+        tools:layout="@layout/fragment_my_treatments" />
+
+    <fragment
+        android:id="@+id/navigation_personal_info"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.profile.PersonalInfoFragment"
+        android:label="@string/nav_menu_personal_information"
+        tools:layout="@layout/fragment_personal_info">
+        <action
+            android:id="@+id/action_navigation_to_user_profile"
+            app:destination="@id/user_profile">
+            <argument
+                android:name="USER_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/user_profile"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.profile.UserProfileFragment"
+        android:label="@string/my_profile"
+        tools:layout="@layout/fragment_user_profile">
+
+        <action
+            android:id="@+id/navigation_user_profile_to_navigation_user_profile"
+            app:destination="@id/user_profile">
+            <argument
+                android:name="USER_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/navigation_user_profile_to_messages_conversation"
+            app:destination="@id/navigation_messaging_conversation"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.settings.SettingsFragment"
+        android:label="@string/nav_menu_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_navigation_settings_to_pushNotificationsFragment"
+            android:label="@string/push_notifications"
+            app:destination="@id/pushNotificationsFragment"
+            tools:layout="@layout/fragment_push_notifications" />
+        <action
+            android:id="@+id/action_navigation_settings_to_unitsFragment"
+            android:label="@string/units"
+            app:destination="@id/unitsFragment"
+            tools:layout="@layout/fragment_units" />
+        <action
+            android:id="@+id/action_navigation_settings_to_privacySettingsFragment"
+            android:label="@string/privacy_settings"
+            app:destination="@id/privacySettingsFragment"
+            tools:layout="@layout/fragment_privacy_settings" />
+        <action
+            android:id="@+id/action_navigation_settings_to_screenBrightnessFragment"
+            android:label="@string/screen_brightness"
+            app:destination="@id/screenBrightnessFragment"
+            tools:layout="@layout/fragment_screen_brightness" />
+        <action
+            android:id="@+id/action_navigation_settings_to_appearanceFragment"
+            android:label="@string/appearance"
+            app:destination="@id/appearanceFragment"
+            tools:layout="@layout/fragment_appearance" />
+        <action
+            android:id="@+id/action_navigation_settings_to_emailPasswordFragment"
+            android:label="@string/email_address_password"
+            app:destination="@id/emailPasswordFragment"
+            tools:layout="@layout/fragment_email_password" />
+        <action
+            android:id="@+id/action_navigation_settings_to_blockedMembersFragment"
+            android:label="@string/blocked_members"
+            app:destination="@id/blockedMembersFragment"
+            tools:layout="@layout/fragment_blocked_members" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/community_all_groups"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.community.groups.CommunityAllGroupsFragment"
+        android:label="fragment_community_all_groups"
+        tools:layout="@layout/fragment_community_all_groups">
+        <action
+            android:id="@+id/action_community_all_groups_to_group_fragment"
+            app:destination="@id/group_fragment">
+            <argument
+                android:name="GROUP_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="GROUP_PRIVATE"
+                android:defaultValue="false"
+                app:argType="boolean" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/group_fragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.community.groups.groupDetails.GroupFragment"
+        android:label="fragment_group"
+        tools:layout="@layout/fragment_group">
+        <action
+            android:id="@+id/group_fragment_to_about_the_group_fragment"
+            app:destination="@id/about_the_group_fragment" />
+        <action
+            android:id="@+id/group_fragment_to_group_community_guidelines_fragment"
+            app:destination="@id/group_community_guidelines_fragment" />
+        <action
+            android:id="@+id/group_fragment_to_user_profile"
+            app:destination="@id/user_profile">
+            <argument
+                android:name="USER_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/group_fragment_to_event_details"
+            app:destination="@id/event_details" />
+        <action
+            android:id="@+id/group_fragment_to_resource_details"
+            app:destination="@id/resource_details" />
+        <action
+            android:id="@+id/action_community_group_to_group_discussion_thread"
+            app:destination="@id/community_group_discussion_thread">
+            <argument
+                android:name="DISCUSSION_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="GROUP_TITLE"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="DISCUSSION_DETAILS"
+                android:defaultValue="@null"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/group_fragment_to_tag_details_fragment"
+            app:destination="@id/tag_details_fragment" />
+        <action
+            android:id="@+id/navigation_new_group_members_to_messages_conversation"
+            app:destination="@id/navigation_messaging_conversation"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/group_community_guidelines_fragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.community.groups.GroupCommunityGuidelinesFragment"
+        android:label="fragment_group_community_guidelines"
+        tools:layout="@layout/fragment_group_community_guidelines" />
+
+    <fragment
+        android:id="@+id/about_the_group_fragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.community.groups.AboutTheGroupFragment"
+        android:label="fragment_about_the_group"
+        tools:layout="@layout/fragment_about_the_group">
+        <action
+            android:id="@+id/action_community_all_groups_to_group_fragment"
+            app:destination="@id/group_fragment">
+            <argument
+                android:name="GROUP_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="GROUP_PRIVATE"
+                android:defaultValue="false"
+                app:argType="boolean" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/pushNotificationsFragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.settings.PushNotificationsFragment"
+        android:label="PushNotificationsFragment"
+        tools:layout="@layout/fragment_push_notifications" />
+
+    <fragment
+        android:id="@+id/unitsFragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.settings.UnitsFragment"
+        android:label="UnitsFragment"
+        tools:layout="@layout/fragment_units" />
+
+    <fragment
+        android:id="@+id/privacySettingsFragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.settings.PrivacySettingsFragment"
+        android:label="PrivacySettingsFragment"
+        tools:layout="@layout/fragment_privacy_settings" />
+
+    <fragment
+        android:id="@+id/screenBrightnessFragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.settings.ScreenBrightnessFragment"
+        android:label="ScreenBrightnessFragment"
+        tools:layout="@layout/fragment_screen_brightness" />
+
+    <fragment
+        android:id="@+id/appearanceFragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.settings.AppearanceFragment"
+        android:label="AppearanceFragment"
+        tools:layout="@layout/fragment_appearance" />
+
+    <fragment
+        android:id="@+id/emailPasswordFragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.settings.EmailPasswordFragment"
+        android:label="EmailPasswordFragment"
+        tools:layout="@layout/fragment_email_password" />
+
+    <fragment
+        android:id="@+id/blockedMembersFragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.settings.BlockedMembersFragment"
+        android:label="BlockedMembersFragment"
+        tools:layout="@layout/fragment_blocked_members">
+        <action
+            android:id="@+id/blockedMembersFragment_to_blockedPrivateMessagesFragment"
+            app:destination="@id/blockedPrivateMessagesFragment" />
+        <action
+            android:id="@+id/blockedMembersFragment_to_hiddenPostsFragment"
+            app:destination="@id/hiddenPostsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/blockedPrivateMessagesFragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.settings.BlockedPrivateMessagesFragment"
+        android:label="BlockedPrivateMessagesFragment"
+        tools:layout="@layout/fragment_blocked_private_messages" />
+
+    <fragment
+        android:id="@+id/hiddenPostsFragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.settings.HiddenPostsFragment"
+        android:label="HiddenPostsFragment"
+        tools:layout="@layout/fragment_hidden_posts" />
+
+    <fragment
+        android:id="@+id/navigation_notification"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.home.NotificationFragment"
+        android:label="NotificationFragment"
+        tools:layout="@layout/fragment_notification">
+        <action
+            android:id="@+id/navigation_notification_to_user_profile"
+            app:destination="@id/user_profile">
+            <argument
+                android:name="USER_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/navigation_notification_to_navigation_my_treatments"
+            app:destination="@id/navigation_my_treatments">
+            <argument
+                android:name="USER_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/navigation_notification_to_group_fragment"
+            app:destination="@id/group_fragment">
+            <argument
+                android:name="GROUP_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="GROUP_PRIVATE"
+                android:defaultValue="false"
+                app:argType="boolean" />
+        </action>
+        <action
+            android:id="@+id/navigation_notification_to_group_discussion_thread"
+            app:destination="@id/community_group_discussion_thread">
+            <argument
+                android:name="DISCUSSION_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="GROUP_TITLE"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="DISCUSSION_DETAILS"
+                android:defaultValue="@null"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/community_group_discussion_thread"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.community.groups.groupDetails.groupDiscussions.GroupDiscussionThreadFragment"
+        android:label="fragment_community_group_discussion_thread"
+        tools:layout="@layout/fragment_community_group_discussion_thread">
+        <action
+            android:id="@+id/action_discussion_thread_to_reply"
+            app:destination="@id/community_group_discussion_reply">
+            <argument
+                android:name="DISCUSSION_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="COMMENT_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+            <argument
+                android:name="DISCUSSION_DETAILS"
+                android:defaultValue="@null"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/navigation_comment_to_user_profile"
+            app:destination="@id/user_profile">
+            <argument
+                android:name="USER_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/navigation_comment_to_tag_details_fragment"
+            app:destination="@id/tag_details_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/community_group_discussion_reply"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.community.groups.groupDetails.groupDiscussions.GroupDiscussionReplyFragment"
+        android:label="fragment_community_group_discussion_reply"
+        tools:layout="@layout/fragment_community_group_discussion_reply">
+        <action
+            android:id="@+id/navigation_reply_to_user_profile"
+            app:destination="@id/user_profile">
+            <argument
+                android:name="USER_ID"
+                android:defaultValue="@null"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_messaging"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.messages.MessagingFragment"
+        android:label="MessagingFragment"
+        tools:layout="@layout/fragment_messaging">
+        <action
+            android:id="@+id/navigation_messaging_to_messaging_conversation"
+            app:destination="@id/navigation_messaging_conversation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_messaging_conversation"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.messages.MessageConversationFragment"
+        android:label="MessageConversationFragment"
+        tools:layout="@layout/fragment_message_conversation" />
+</navigation>

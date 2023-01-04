@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "message": null,
+  "data": {
+    "id": 17,
+    "media_url": null,
+    "moderator": {
+      "id": 928535,
+      "name": "Yash Shah",
+      "profile_pic": "https:/assets/deactivated-8d2e62882ddd1da7e17eefba4317ddaba35c2ee3c6819753a1cbd3cbc81a1d70.svg",
+      "user_badges": [
+        "PLM STAFF"
+      ]
+    },
+    "name": "Public Group 001",
+    "description": "Test Description for public group 1",
+    "suggested_groups": [
+      {
+        "id": 13,
+        "name": "test group",
+        "description": "",
+        "key": "test10",
+        "stats": {
+          "members": 6
+        }
+      },
+      {
+        "id": 18,
+        "name": "Public Group 002",
+        "description": "Testing Descrption",
+        "key": "publicgroup002",
+        "stats": {
+          "members": 5
+        }
+      },
+      {
+        "id": 19,
+        "name": "public Group 003",
+        "description": "",
+        "key": "11",
+        "stats": {
+          "members": 7
+        }
+      }
+    ]
+  },
+  "meta": {}
+}

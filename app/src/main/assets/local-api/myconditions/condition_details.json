@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "message": null,
+  "data": {
+    "condition_info": {
+      "id": 1358238,
+      "condition_id": 1,
+      "name": "Amyotrophic lateral sclerosis",
+      "stage_name": null,
+      "diagnosed_since": null,
+      "first_symptom_date": "11-14-2022",
+      "privacy": "personal",
+      "stage_id": null,
+      "treatments": [],
+      "symptoms": [
+        {
+          "id": 1,
+          "symptom_info_id": 13098108,
+          "name": "pain",
+          "privacy": "personal",
+          "history": [
+            {
+              "id": 18337093,
+              "symptom_id": 1,
+              "symptom_info_id": 13098108,
+              "severity": 1,
+              "start_date": "2022-11-14",
+              "end_date": "2022-11-14",
+              "created_at": "2022-11-14T06:18:31Z",
+              "updated_at": "2022-11-14T06:18:31Z"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meta": {}
+}

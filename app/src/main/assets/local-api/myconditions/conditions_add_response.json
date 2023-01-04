@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "message": "Condition Added successfully",
+  "data": {
+    "id": 1358019,
+    "condition_id": 14,
+    "name": "Multiple sclerosis",
+    "position": 1,
+    "stage_name": null,
+    "diagnosed_since": "Oct 23, 2024",
+    "known_symptoms": [
+      {
+        "id": 1,
+        "symptom_info_id": 13098099,
+        "name": "pain",
+        "privacy": "personal",
+        "history": [
+          {
+            "id": 18337081,
+            "symptom_id": 1,
+            "symptom_info_id": 13098099,
+            "severity": null,
+            "start_date": "2022-11-10",
+            "end_date": "2022-11-10",
+            "created_at": "2022-11-10T13:48:14Z",
+            "updated_at": "2022-11-10T13:48:14Z"
+          }
+        ]
+      }
+    ],
+    "privacy": "personal",
+    "stage_id": null,
+    "first_symptom_date": "Oct 23, 1997"
+  },
+  "meta": {}
+}

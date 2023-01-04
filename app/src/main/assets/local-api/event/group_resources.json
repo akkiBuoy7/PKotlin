@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "message": "",
+  "data": {
+    "resources": [
+      {
+        "id": 1,
+        "login": "testname1",
+        "name": "Test Name 1",
+        "profile_pic": ""
+      },
+      {
+        "id": 2,
+        "login": "testname2",
+        "name": "Test Name 2",
+        "profile_pic": ""
+      },
+      {
+        "id": 3,
+        "login": "testname3",
+        "name": "Test Name 3",
+        "profile_pic": ""
+      }
+    ]
+  },
+  "meta": {}
+}

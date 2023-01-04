@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:layout_constraintTop_toBottomOf="@+id/rv_promo_card">
+
+    <plm.patientslikeme2.utils.usercontrol.UserTextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextView24"
+        android:tag="14"
+        android:layout_gravity="center_horizontal" />
+
+    <plm.patientslikeme2.utils.usercontrol.UserTextView
+        android:id="@+id/tv_join_prompt"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextView16"
+        android:tag="14"
+        android:maxLines="3"
+        android:text="@string/find_group_prompt"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/_30dp"
+        android:layout_marginRight="@dimen/_30dp"
+        android:gravity="center"
+        android:textColor="@color/teal" />
+
+    <plm.patientslikeme2.utils.usercontrol.UserTextView
+        android:id="@+id/tv_join_prompt_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextView16"
+        android:tag="14"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginLeft="@dimen/_30dp"
+        android:layout_marginRight="@dimen/_30dp"
+        android:gravity="center"
+        android:text="@string/find_group_prompt_details" />
+
+    <plm.patientslikeme2.utils.usercontrol.UserButton
+        android:id="@+id/btn_find_a_group"
+        style="@style/ButtonDarkGreen"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginBottom="@dimen/_12dp"
+        android:text="@string/find_a_group" />
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="plm.patientslikeme2.utils.extensions.IntentsKt" />
+
+        <variable
+            name="model"
+            type="plm.patientslikeme2.data.model.profile.AboutConditions" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/_8dp"
+            android:weightSum="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                style="@style/TextViewBold16"
+                android:layout_width="wrap_content"
+                android:gravity="center|start"
+                app:upperFirstChar="@{model.name}" />
+
+            <LinearLayout
+                android:id="@+id/ll_stage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:visibility="@{(model.stage != null) ? View.VISIBLE : View.GONE}">
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextViewBold16"
+                    android:layout_width="wrap_content"
+                    android:gravity="center|start"
+                    android:text="@string/stage_colon" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_stage"
+                    style="@style/TextView16"
+                    android:layout_marginStart="@dimen/_5dp"
+                    android:gravity="center|start"
+                    android:text="@{(model.stage!=null)?model.stage:``}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_diagnosed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:visibility="@{(model.diagnosed != null) ? View.VISIBLE : View.GONE}">
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextViewBold16"
+                    android:layout_width="wrap_content"
+                    android:gravity="center|start"
+                    android:text="@string/diagnosed_colon" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_diagnosed"
+                    style="@style/TextView16"
+                    android:layout_marginStart="@dimen/_5dp"
+                    android:gravity="center|start"
+                    android:text="@{(model.diagnosed!=null)?model.diagnosed:``}" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

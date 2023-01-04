@@ -1,0 +1,129 @@
+{
+  "success": true,
+  "message": null,
+  "data": {
+    "treatments": {
+      "other": {
+        "condition_id": null,
+        "condition_name": null,
+        "treatment_histories": [
+          {
+            "id": 1526919,
+            "name": "Psychotherapy",
+            "latest_dosage_string": null,
+            "privacy": "plm"
+          },
+          {
+            "id": 1834712,
+            "name": "Fenofibrate",
+            "latest_dosage_string": "1 160 mg Tab daily",
+            "privacy": "plm"
+          },
+          {
+            "id": 1526923,
+            "name": "Prazosin",
+            "latest_dosage_string": "2 5 mg Caps daily",
+            "privacy": "plm"
+          },
+          {
+            "id": 1719105,
+            "name": "Trazodone",
+            "latest_dosage_string": "1 100 mg Tab daily",
+            "privacy": "plm"
+          },
+          {
+            "id": 1786635,
+            "name": "Lipitor",
+            "latest_dosage_string": "1 80 mg Tab daily",
+            "privacy": "plm"
+          },
+          {
+            "id": 1719102,
+            "name": "Clonazepam",
+            "latest_dosage_string": "1 0.5 mg Tab twice daily",
+            "privacy": "plm"
+          }
+        ]
+      },
+      "378": {
+        "condition_id": 378,
+        "condition_name": "dissociative identity disorder",
+        "treatment_histories": [
+          {
+            "id": 1526919,
+            "name": "Psychotherapy",
+            "latest_dosage_string": null,
+            "privacy": "plm"
+          }
+        ]
+      },
+      "19": {
+        "condition_id": 19,
+        "condition_name": "major depressive disorder",
+        "treatment_histories": [
+          {
+            "id": 1526919,
+            "name": "Psychotherapy",
+            "latest_dosage_string": null,
+            "privacy": "plm"
+          },
+          {
+            "id": 1526920,
+            "name": "Effexor",
+            "latest_dosage_string": "75 mg daily",
+            "privacy": "plm"
+          }
+        ]
+      },
+      "22": {
+        "condition_id": 22,
+        "condition_name": "panic disorder",
+        "treatment_histories": [
+          {
+            "id": 1526921,
+            "name": "Paxil",
+            "latest_dosage_string": "1 30 mg Tab daily",
+            "privacy": "plm"
+          },
+          {
+            "id": 1526922,
+            "name": "Ativan",
+            "latest_dosage_string": null,
+            "privacy": "plm"
+          },
+          {
+            "id": 1526920,
+            "name": "Effexor",
+            "latest_dosage_string": "75 mg daily",
+            "privacy": "plm"
+          }
+        ]
+      },
+      "118": {
+        "condition_id": 118,
+        "condition_name": "restless legs syndrome",
+        "treatment_histories": [
+          {
+            "id": 1526924,
+            "name": "Neupro Patch",
+            "latest_dosage_string": "1 0.125 mg/hr 24 HR Patch daily",
+            "privacy": "plm"
+          }
+        ]
+      },
+      "3295": {
+        "condition_id": 3295,
+        "condition_name": "Autosomal dominant polycystic kidney disease",
+        "treatment_histories": [
+          {
+            "id": 2439386,
+            "name": "spearmint",
+            "latest_dosage_string": null,
+            "privacy": "plm"
+          }
+        ]
+      }
+    }
+  },
+  "meta": {}
+}

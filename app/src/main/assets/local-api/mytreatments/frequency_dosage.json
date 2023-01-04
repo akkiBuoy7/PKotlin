@@ -1,0 +1,145 @@
+{
+  "success": true,
+  "data": {
+    "id": 2,
+    "name": "Over the Counter Drug",
+    "default_dosage_units": [
+      {
+        "id": 1,
+        "description": "milligram(s)"
+      },
+      {
+        "id": 3,
+        "description": "gram(s)"
+      },
+      {
+        "id": 2,
+        "description": "milliliter(s)"
+      },
+      {
+        "id": 5,
+        "description": "hour(s)"
+      },
+      {
+        "id": 107,
+        "description": "Unspecified"
+      },
+      {
+        "id": 108,
+        "description": "cap"
+      },
+      {
+        "id": 109,
+        "description": "tab"
+      },
+      {
+        "id": 110,
+        "description": "patches"
+      },
+      {
+        "id": 111,
+        "description": "puffs"
+      },
+      {
+        "id": 112,
+        "description": "mL"
+      },
+      {
+        "id": 113,
+        "description": "%"
+      },
+      {
+        "id": 114,
+        "description": "mg/m2"
+      }
+    ],
+    "dosage_units": [
+      {
+        "id": "rxterms-55192",
+        "description": "mixed pack"
+      }
+    ],
+    "frequency_units": [
+      {
+        "id": 11,
+        "display_name": "Daily"
+      },
+      {
+        "id": 14,
+        "display_name": "Twice daily"
+      },
+      {
+        "id": 1,
+        "display_name": "Three times daily"
+      },
+      {
+        "id": 3,
+        "display_name": "Four times daily"
+      },
+      {
+        "id": 4,
+        "display_name": "Five times daily"
+      },
+      {
+        "id": 13,
+        "display_name": "Weekly"
+      },
+      {
+        "id": 10,
+        "display_name": "Every other day"
+      },
+      {
+        "id": 89,
+        "display_name": "Every Other Week"
+      },
+      {
+        "id": 30,
+        "display_name": "Every 3 Weeks"
+      },
+      {
+        "id": 12,
+        "display_name": "Monthly"
+      },
+      {
+        "id": 33,
+        "display_name": "Every 6 Weeks"
+      },
+      {
+        "id": 118,
+        "display_name": "Every 8 Weeks"
+      },
+      {
+        "id": 58,
+        "display_name": "Every 3 months"
+      },
+      {
+        "id": 125,
+        "display_name": "Every 12 Weeks"
+      },
+      {
+        "id": 126,
+        "display_name": "Every 6 months"
+      },
+      {
+        "id": 127,
+        "display_name": "Every 8 months"
+      },
+      {
+        "id": 28,
+        "display_name": "Yearly"
+      },
+      {
+        "id": 52,
+        "display_name": "One time"
+      },
+      {
+        "id": 120,
+        "display_name": "As needed"
+      },
+      {
+        "id": 109,
+        "display_name": "M,W,F"
+      }
+    ]
+  }
+}

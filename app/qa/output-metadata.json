@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "plm.patientslikeme2.qa",
+  "variantName": "qa",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 1,
+      "versionName": "1.13-qa",
+      "outputFile": "app-qa.apk"
+    }
+  ],
+  "elementType": "File"
+}

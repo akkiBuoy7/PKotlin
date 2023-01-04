@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="plm.patientslikeme2.data.model.treatments.ReminderNotificationsAttributesItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/edtTiming"
+                style="@style/EditText"
+                android:layout_width="@dimen/_70dp"
+                android:layout_marginEnd="@dimen/_10dp"
+                android:height="@dimen/_40dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:gravity="center"
+                android:maxLength="5"
+                android:singleLine="true"
+                android:tag="9"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchAMPM"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40dp"
+                android:background="@drawable/theme_rect_round"
+                android:textColor="@color/black"
+                android:textOff="@string/hint_am"
+                android:textOn="@string/hint_pm"
+                android:fontFamily="@font/poppins_semibold"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sp"
+                android:thumb="@drawable/thumb"
+                app:showText="true"
+                app:track="@drawable/track" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sAppointmnetReminder"
+                style="@style/SwitchButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

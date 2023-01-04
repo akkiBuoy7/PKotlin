@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "message": null,
+  "data": {
+    "results": [
+      {
+        "name": "Amyotrophic lateral sclerosis",
+        "data": {
+          "id": 1358238,
+          "name": "Amyotrophic lateral sclerosis",
+          "type": "condition_info"
+        }
+      },
+      {
+        "name": "perennial allergy",
+        "data": {
+          "id": 352,
+          "name": "perennial allergy",
+          "type": "condition_info"
+        }
+      },
+      {
+        "name": "alkaptonuria",
+        "data": {
+          "id": 157,
+          "name": "alkaptonuria",
+          "type": "condition_info"
+        }
+      }
+    ]
+  },
+  "meta": {}
+}

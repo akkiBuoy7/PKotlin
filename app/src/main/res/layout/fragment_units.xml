@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handlers"
+            type="plm.patientslikeme2.ui.main.view.fragment.settings.UnitsFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/parentLayoutColor"
+        android:paddingStart="@dimen/_10dp"
+        android:paddingEnd="@dimen/_10dp"
+        tools:context=".ui.main.view.fragment.settings.UnitsFragment">
+
+        <LinearLayout
+            android:id="@+id/ll_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{handlers::onItemClicked}"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_10dp"
+            android:paddingStart="@dimen/_16dp"
+            android:paddingEnd="@dimen/_1dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                style="@style/TextView16"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center|start"
+                android:paddingTop="@dimen/_4dp"
+                android:text="@string/temperature" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_temperature"
+                style="@style/TextView14"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/ic_forward_arrow"
+                android:gravity="center|end"
+                android:paddingTop="@dimen/_4dp"
+                android:text="@string/fahrenheit"
+                android:textColor="@color/gray_dark_5" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_one"
+            style="@style/DotLineView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_temperature" />
+
+        <LinearLayout
+            android:id="@+id/ll_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{handlers::onItemClicked}"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_10dp"
+            android:paddingStart="@dimen/_16dp"
+            android:paddingEnd="@dimen/_1dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_one">
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                style="@style/TextView16"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center|start"
+                android:paddingTop="@dimen/_4dp"
+                android:text="@string/weight_measure" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_weight_measure"
+                style="@style/TextView14"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/ic_forward_arrow"
+                android:gravity="center|end"
+                android:paddingTop="@dimen/_4dp"
+                android:text="@string/imperial"
+                android:textColor="@color/gray_dark_5" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_two"
+            style="@style/DotLineView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_weight" />
+
+        <LinearLayout
+            android:id="@+id/ll_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{handlers::onItemClicked}"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_10dp"
+            android:paddingStart="@dimen/_16dp"
+            android:paddingEnd="@dimen/_1dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_weight">
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                style="@style/TextView16"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:paddingTop="@dimen/_4dp"
+                android:text="@string/date_format" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_date_format"
+                style="@style/TextView14"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/ic_forward_arrow"
+                android:gravity="center|end"
+                android:paddingTop="@dimen/_4dp"
+                android:text="@string/dd_mm_yyyy"
+                android:textColor="@color/gray_dark_5" />
+        </LinearLayout>
+
+        <View
+            style="@style/DotLineView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_date" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

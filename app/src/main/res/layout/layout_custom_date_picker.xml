@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <plm.patientslikeme2.utils.usercontrol.UserTextView
+        android:id="@+id/tvLabelHeader"
+        style="@style/TextViewBold16"
+        android:layout_width="wrap_content"
+        android:tag="12"
+        android:text="@string/day" />
+
+    <plm.patientslikeme2.utils.usercontrol.UserTextView
+        android:id="@+id/edtDay"
+        style="@style/TextViewBold16"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginBottom="@dimen/_5dp"
+        android:background="@drawable/bg_edittext_round_gray"
+        android:drawableEnd="@drawable/ic_arrow_up_small"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/_8dp"
+        android:paddingBottom="@dimen/_8dp"
+        android:tag="12" />
+</LinearLayout>

@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "message": "",
+  "data": {
+    "my_profile": {
+      "id": 1,
+      "login": "testname",
+      "name": "Test Name",
+      "brief_bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "living_with": "CKD, MS, Bipolar",
+      "address": "Test address",
+      "posted_comments_count": 10,
+      "posted_likes_count": 20,
+      "about": {
+        "story_title": "Testing story Title",
+        "story_content": "Testing story Content",
+        "conditions": [
+          {
+            "id": 1,
+            "name": "Test Condition 1",
+            "stage": "Stage 1",
+            "diagnosed": "April, 2016"
+          },
+          {
+            "id": 1,
+            "name": "Test Condition 2",
+            "stage": "Stage 2",
+            "diagnosed_on": "April, 2016"
+          }
+        ],
+        "community_badges": [],
+        "quick_stats": {
+          "member_since": "April 17, 2012",
+          "followers_count": 12,
+          "followings_count": 10,
+          "helpful_marks_received": 5,
+          "posted_comments_count": 10
+        },
+        "interests": {
+          "primary": "Parenting",
+          "secondary": [
+            "Relationships",
+            "Research",
+            "Veterans’ Issues"
+          ]
+        }
+      }
+    }
+  },
+  "meta": {}
+}

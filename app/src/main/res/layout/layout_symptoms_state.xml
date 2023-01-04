@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RadioGroup
+        android:id="@+id/rg_severity"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45dp"
+        android:background="@drawable/bg_symptoms_radio_group"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rb_none"
+            style="@style/TextView13"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/selector_symptoms_none"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="@dimen/_4dp"
+            android:text="@string/none" />
+
+        <View
+            android:layout_width="@dimen/_1dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/_4dp"
+            android:background="@color/gray_dark_3" />
+
+        <RadioButton
+            android:id="@+id/rb_mild"
+            style="@style/TextView13"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/selector_symptoms_mild"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="@dimen/_4dp"
+            android:text="@string/mild" />
+
+        <View
+            android:layout_width="@dimen/_1dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/_4dp"
+            android:background="@color/gray_dark_3" />
+
+        <RadioButton
+            android:id="@+id/rb_moderate"
+            style="@style/TextView13"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/selector_symptoms_moderate"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="@dimen/_4dp"
+            android:text="@string/moderate" />
+
+        <View
+            android:layout_width="@dimen/_1dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/_4dp"
+            android:background="@color/gray_dark_3" />
+
+        <RadioButton
+            android:id="@+id/rb_severe"
+            style="@style/TextView13"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/selector_symptoms_severe"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="@dimen/_4dp"
+            android:text="@string/severe" />
+    </RadioGroup>
+</layout>

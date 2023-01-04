@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "message": null,
+  "data": {
+    "symptoms": [
+      {
+        "id": 1,
+        "name": "pain",
+        "short_definition": null,
+        "ask_severity": true,
+        "long_definition": null
+      },
+      {
+        "id": 11,
+        "name": "panic attacks",
+        "short_definition": null,
+        "ask_severity": true,
+        "long_definition": null
+      },
+      {
+        "id": 2,
+        "name": "Depressed mood",
+        "short_definition": null,
+        "ask_severity": true,
+        "long_definition": null
+      },
+      {
+        "id": 4,
+        "name": "Fatigue",
+        "short_definition": null,
+        "ask_severity": true,
+        "long_definition": null
+      }
+    ]
+  },
+  "meta": {}
+}

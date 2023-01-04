@@ -1,0 +1,223 @@
+{
+  "success": true,
+  "message": "",
+  "data": {
+    "users": [
+      {
+        "id": 959146,
+        "name": "usertest8877",
+        "login": "usertest8877",
+        "avatar_url": "https:/assets/portrait_default-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+        "address": "",
+        "conditions": [
+          {
+            "id": 662,
+            "name": "syringomyelia",
+            "key": "syringomyelia"
+          }
+        ],
+        "sex": null,
+        "age": 13,
+        "badges": []
+      },
+      {
+        "id": 959147,
+        "name": "tester2",
+        "login": "tester2",
+        "avatar_url": "https://s3.us-east-2.amazonaws.com/uploads-sandbox.patientslikeme.com/avatars/155793-full.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIQDASYYN663DZKCA%2F20221115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20221115T084204Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=2b69f6a7fc47e1d17da7a6c81c9b8224fd04667aaff73bd6458be7ac3f11f2bc",
+        "address": "Daly City, CA",
+        "conditions": [
+          {
+            "id": 2226,
+            "name": "non-small cell lung cancer",
+            "key": "non-small-cell-lung-cancer"
+          },
+          {
+            "id": 615,
+            "name": "lichen planopilaris",
+            "key": "lichen-planopilaris"
+          }
+        ],
+        "sex": "F",
+        "age": 39,
+        "badges": []
+      },
+      {
+        "id": 959141,
+        "name": "testpass",
+        "login": "testpass",
+        "avatar_url": "https:/assets/portrait_default-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+        "address": "",
+        "conditions": [
+          {
+            "id": 2331,
+            "name": "lung carcinoid tumor",
+            "key": "lung-carcinoid-tumor"
+          },
+          {
+            "id": 1717,
+            "name": "small cell lung cancer",
+            "key": "sclc"
+          }
+        ],
+        "sex": null,
+        "age": 47,
+        "badges": []
+      },
+      {
+        "id": 959140,
+        "name": "userios004",
+        "login": "userios004",
+        "avatar_url": "https:/assets/portrait_default-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+        "address": "",
+        "conditions": [
+          {
+            "id": 266,
+            "name": "Kennedy's disease",
+            "key": "kennedy-s-disease"
+          }
+        ],
+        "sex": null,
+        "age": 13,
+        "badges": []
+      },
+      {
+        "id": 959121,
+        "name": "venky100",
+        "login": "venky100",
+        "avatar_url": "https:/assets/portrait_default-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+        "address": "",
+        "conditions": [
+          {
+            "id": 466,
+            "name": "Addison's disease",
+            "key": "addison-s-disease"
+          },
+          {
+            "id": 3236,
+            "name": "Benign skin lesions",
+            "key": "benign-skin-lesions"
+          },
+          {
+            "id": 1162,
+            "name": "rage disorder",
+            "key": "rage-disorder"
+          }
+        ],
+        "sex": "M",
+        "age": 16,
+        "badges": []
+      },
+      {
+        "id": 959095,
+        "name": "Sudheer79",
+        "login": "Sudheer79",
+        "avatar_url": "https:/assets/portrait_default-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+        "address": "",
+        "conditions": [
+          {
+            "id": 51,
+            "name": "diabetes type 1",
+            "key": "diabetes-type-1"
+          }
+        ],
+        "sex": null,
+        "age": 27,
+        "badges": [
+          {
+            "badge": "CAREGIVER",
+            "name": null
+          }
+        ]
+      },
+      {
+        "id": 959105,
+        "name": "vishalk90",
+        "login": "vishalk90",
+        "avatar_url": "https:/assets/portrait_default-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+        "address": "New York, NY",
+        "conditions": [
+          {
+            "id": 19,
+            "name": "major depressive disorder",
+            "key": "major-depression"
+          }
+        ],
+        "sex": "M",
+        "age": 29,
+        "badges": []
+      },
+      {
+        "id": 959080,
+        "name": "sambhaji_31",
+        "login": "sambhaji_31",
+        "avatar_url": "https:/assets/portrait_default-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+        "address": "",
+        "conditions": [
+          {
+            "id": 1717,
+            "name": "small cell lung cancer",
+            "key": "sclc"
+          }
+        ],
+        "sex": null,
+        "age": 23,
+        "badges": []
+      },
+      {
+        "id": 959103,
+        "name": "sambhaji_37",
+        "login": "sambhaji_37",
+        "avatar_url": "https:/assets/portrait_default-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+        "address": "",
+        "conditions": [
+          {
+            "id": 1425,
+            "name": "post intensive care unit syndrome",
+            "key": "post-icu-syndrome"
+          }
+        ],
+        "sex": null,
+        "age": 18,
+        "badges": [
+          {
+            "badge": "CAREGIVER",
+            "name": null
+          }
+        ]
+      },
+      {
+        "id": 959085,
+        "name": "sambhaji_35",
+        "login": "sambhaji_35",
+        "avatar_url": "https:/assets/portrait_default-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+        "address": "Cambridge, MA",
+        "conditions": [
+          {
+            "id": 2362,
+            "name": "cardiofaciocutaneous syndrome",
+            "key": "cardiofaciocutaneous-syndrome"
+          },
+          {
+            "id": 1575,
+            "name": "cardiogenic shock",
+            "key": "cardiogenic-shock"
+          }
+        ],
+        "sex": "M",
+        "age": 22,
+        "badges": [
+          {
+            "badge": "CAREGIVER",
+            "name": null
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "page": 1,
+    "per_page": 10,
+    "total_entries": 24
+  }
+}

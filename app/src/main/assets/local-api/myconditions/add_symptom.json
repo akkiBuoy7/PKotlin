@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "message": null,
+  "data": {
+    "symptom_info": [
+      {
+        "id": 13098109,
+        "symptom_id": 7,
+        "name": "falls",
+        "privacy": "personal",
+        "latest_severity": 2
+      }
+    ]
+  },
+  "meta": {}
+}

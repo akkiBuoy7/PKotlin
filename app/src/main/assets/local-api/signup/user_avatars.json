@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "message": "Photo is updated",
+  "data": {
+    "data": "https://s3.us-east-2.amazonaws.com/uploads-sandbox.patientslikeme.com/avatars/155775-full.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIQDASYYN663DZKCA%2F20221108%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20221108T104416Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=44d6fa656694744f70e74d1148c931f79fc646af1d91bc27a62a7ac8b0320a11"
+  },
+  "meta": {}
+}

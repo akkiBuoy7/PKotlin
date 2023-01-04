@@ -1,0 +1,27 @@
+{
+  "success" : true,
+  "message" : "",
+  "data" : {
+    "suggested_groups" : [
+      {
+        "id" : 1,
+        "name" : "Chronic Kidney Disease Group",
+        "description" : "Testing Description",
+        "key" : "chronic-kidney-disease-group",
+        "stats": {
+          "members" : 10
+        }
+      },
+      {
+        "id" : 2,
+        "name" : "Diabetes Type 2 Group",
+        "description" : "Testing Description",
+        "key" : "diabetes-type-2-group",
+        "stats": {
+          "members" : 5
+        }
+      }
+    ]
+  },
+  "meta" : {}
+}
