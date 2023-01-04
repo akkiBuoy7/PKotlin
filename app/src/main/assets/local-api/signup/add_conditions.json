@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "message": "Condition Added successfully",
+  "data": {
+    "id": 1403349,
+    "condition_id": 3366,
+    "name": "AKI (acute kidney injury) (HCC)",
+    "position": null,
+    "stage_name": "Stage IB",
+    "diagnosed_since": null,
+    "known_symptoms": [],
+    "privacy": "plm",
+    "stage_id": 3
+  },
+  "meta": {}
+}

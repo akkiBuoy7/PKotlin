@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_sheet_parent"
+            android:paddingStart="@dimen/_16dp"
+            android:paddingTop="@dimen/_16dp"
+            android:paddingEnd="@dimen/_16dp"
+            android:paddingBottom="@dimen/_36dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_header"
+                    style="@style/TextViewBold16"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_width="@dimen/_200dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/add_a_treatment" />
+
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="end"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_close_dark_green"
+                    app:tint="@color/gray_dark_4" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_treatment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_header">
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_treatment_name"
+                    style="@style/TextView16"
+                    android:layout_marginHorizontal="@dimen/_8dp"
+                    android:text="@string/treatment_name"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rl_header" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserAutoCompleteTextView
+                    android:id="@+id/ac_treatment_name"
+                    style="@style/EditText"
+                    android:layout_marginTop="@dimen/_4dp"
+                    android:hint="@string/start_typing_to_see_suggestions"
+                    android:tag="9"
+                    android:textColorHint="@color/gray_dark_4"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_treatment_name" />
+            </LinearLayout>
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_purpose"
+                style="@style/TextView16"
+                android:layout_marginHorizontal="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:text="@string/purpose"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_treatment" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserAutoCompleteTextView
+                android:id="@+id/ac_search_purpose"
+                style="@style/EditText"
+                android:layout_marginHorizontal="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_4dp"
+                android:hint="@string/start_typing_to_see_suggestions"
+                android:tag="9"
+                android:textColorHint="@color/gray_dark_4"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_purpose" />
+
+            <View
+                android:id="@+id/view_divider_1"
+                style="@style/DotLineView"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ac_search_purpose" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_start_date"
+                style="@style/TextViewBold16"
+                android:layout_marginHorizontal="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:text="@string/start_date"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_divider_1" />
+
+            <LinearLayout
+                android:id="@+id/ll_date_of_diagnosis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tv_start_date">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView16"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10dp"
+                        android:text="@string/month" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_month"
+                        style="@style/Spinner"
+                        android:layout_height="@dimen/_42dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4dp"
+                        android:gravity="center|start"
+                        android:inputType="date"
+                        android:paddingHorizontal="@dimen/_16dp"
+                        android:paddingTop="@dimen/_4dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView16"
+                        android:layout_marginHorizontal="@dimen/_10dp"
+                        android:text="@string/day" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_day"
+                        style="@style/Spinner"
+                        android:layout_height="@dimen/_42dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4dp"
+                        android:gravity="center|start"
+                        android:inputType="date"
+                        android:paddingHorizontal="@dimen/_16dp"
+                        android:paddingTop="@dimen/_4dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView16"
+                        android:layout_marginHorizontal="@dimen/_10dp"
+                        android:text="@string/year" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_year"
+                        style="@style/Spinner"
+                        android:layout_height="@dimen/_42dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4dp"
+                        android:gravity="center|start"
+                        android:inputType="date"
+                        android:paddingHorizontal="@dimen/_16dp"
+                        android:paddingTop="@dimen/_4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_divider_2"
+                style="@style/DotLineView"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_date_of_diagnosis" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_symptoms"
+                style="@style/TextViewBold16"
+                android:layout_marginHorizontal="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:text="@string/dosage"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_divider_2" />
+
+            <LinearLayout
+                android:id="@+id/ll_symptoms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tv_symptoms">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView16"
+                        android:id="@+id/tv_count"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10dp"
+                        android:text="@string/label" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserEditText
+                        android:id="@+id/edtCount"
+                        style="@style/Spinner"
+                        android:layout_height="@dimen/_42dp"
+                        android:layout_marginTop="@dimen/_4dp"
+                        android:inputType="number"
+                        android:tag="9"
+                        android:hint="@string/count"
+                        android:maxLength="4"
+                        android:paddingHorizontal="@dimen/_16dp"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView16"
+                        android:layout_marginHorizontal="@dimen/_10dp"
+                        android:text="@string/dosage" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/edtDosage"
+                        style="@style/Spinner"
+                        android:paddingEnd="@dimen/_10dp"
+                        android:paddingStart="@dimen/_5dp"
+                        android:layout_height="@dimen/_42dp"
+                        android:layout_marginTop="@dimen/_4dp"
+                        android:spinnerMode="dropdown"
+                        android:dropDownVerticalOffset="@dimen/_30dp"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView16"
+                        android:layout_marginHorizontal="@dimen/_10dp"
+                        android:text="@string/frequency" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/edtFrequency"
+                        style="@style/Spinner"
+                        android:layout_height="@dimen/_42dp"
+                        android:paddingEnd="@dimen/_10dp"
+                        android:paddingStart="@dimen/_5dp"
+                        android:layout_marginTop="@dimen/_4dp"
+                        android:inputType="date"
+                        android:dropDownHeight="10dp"
+                        android:spinnerMode="dropdown"
+                        android:dropDownVerticalOffset="@dimen/_30dp"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <plm.patientslikeme2.utils.usercontrol.UserCheckBox
+                android:id="@+id/cb_status"
+                style="@style/TextView16"
+                android:layout_marginHorizontal="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:button="@drawable/bg_check_box"
+                android:paddingStart="@dimen/_10dp"
+                android:paddingTop="@dimen/_4dp"
+                android:text="@string/i_take_additional_doses_as_needed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_symptoms" />
+
+            <View
+                android:id="@+id/view_divider_3"
+                style="@style/DotLineView"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_status" />
+
+            <LinearLayout
+                android:id="@+id/ll_reminder_headers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_divider_3">
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextViewBold16"
+                    android:layout_marginHorizontal="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:layout_weight="1"
+                    android:text="@string/timing"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_divider_1" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextViewBold16"
+                    android:layout_marginHorizontal="@dimen/_8dp"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/notification"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_divider_1" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_reminders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_reminder_headers"
+                tools:listitem="@layout/row_reminder_time" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_add_another_reminder"
+                style="@style/TextView16"
+                android:layout_marginHorizontal="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:gravity="center"
+                android:text="@string/add_another_reminder"
+                android:textColor="@color/blue_darker"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_reminders" />
+
+            <View
+                android:id="@+id/view_divider_4"
+                style="@style/DotLineView"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_add_another_reminder" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_privacy_settings"
+                style="@style/TextViewBold16"
+                android:layout_marginHorizontal="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_20dp"
+                android:text="@string/privacy_settings_for_conditionname"
+                android:layout_width="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_divider_4" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_privacy_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/tv_privacy_settings"
+                android:layout_marginStart="@dimen/_5dp"
+                app:layout_constraintLeft_toRightOf="@+id/tv_privacy_settings"
+                app:layout_constraintBottom_toBottomOf="@id/tv_privacy_settings"
+                android:src="@drawable/ic_info"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_privacy_settings"
+                style="@style/Spinner"
+                android:layout_height="@dimen/_42dp"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_privacy_settings" />
+
+            <LinearLayout
+                android:id="@+id/ll_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_20dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/spinner_privacy_settings"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_error_red" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_error"
+                    style="@style/TextView16"
+                    android:layout_gravity="center|start"
+                    android:layout_marginStart="@dimen/_2dp"
+                    android:gravity="center|start"
+                    android:paddingTop="@dimen/_4dp"
+                    tools:text="@string/invalid_password" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_error">
+
+                <plm.patientslikeme2.utils.usercontrol.UserButton
+                    android:id="@+id/btn_save"
+                    style="@style/ButtonDarkGreen"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:text="@string/save"
+                    android:textSize="@dimen/_14sp" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserButton
+                    android:id="@+id/btn_cancel"
+                    style="@style/ButtonDarkGreenBorder"
+                    android:layout_width="wrap_content"
+                    android:text="@string/cancel"
+                    android:textSize="@dimen/_14sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

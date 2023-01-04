@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="plm.patientslikeme2.utils.extensions.IntentsKt" />
+
+        <variable
+            name="model"
+            type="plm.patientslikeme2.data.model.profile.Conditions" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_8dp">
+
+        <plm.patientslikeme2.utils.usercontrol.UserTextView
+            android:id="@+id/tv_heading"
+            style="@style/TextView18"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:gravity="center"
+            android:lineSpacingExtra="0sp"
+            android:tag="14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:upperFirstChar="@{model.name}"
+            tools:text="Chronic kidney disease" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_heading">
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_symptoms"
+                style="@style/TextViewBold16"
+                android:layout_marginTop="@dimen/_8dp"
+                android:gravity="center"
+                android:lineSpacingExtra="0sp"
+                android:text="@string/symptoms"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_symptoms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_4dp"
+                android:weightSum="3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_symptoms">
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextView13"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center|start"
+                    android:lineSpacingExtra="0sp"
+                    android:tag="3"
+                    android:text="@string/symptom"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextView13"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:lineSpacingExtra="0sp"
+                    android:tag="3"
+                    android:text="@string/severity"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider_line_1"
+                style="@style/LineView"
+                android:layout_marginVertical="@dimen/_8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_symptoms" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_symptoms_empty"
+                style="@style/TextView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/_10dp"
+                android:text="@string/no_symptoms_available"
+                android:visibility="@{((model.symptoms==null) || (model.symptoms.size()==0))  ? View.VISIBLE : View.GONE}"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_line_1" />
+
+            <LinearLayout
+                android:id="@+id/rv_symptoms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="@{((model.symptoms!=null) &amp;&amp; (model.symptoms.size()>0))  ? View.VISIBLE : View.GONE}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_symptoms_empty"
+                tools:listitem="@layout/row_severity" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_my_treatments"
+                style="@style/TextViewBold16"
+                android:layout_marginTop="@dimen/_16dp"
+                android:gravity="center"
+                android:lineSpacingExtra="0sp"
+                android:text="@string/my_treatments"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_symptoms" />
+
+            <LinearLayout
+                android:id="@+id/ll_treatments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:weightSum="3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_my_treatments">
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextView13"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center|start"
+                    android:lineSpacingExtra="0sp"
+                    android:tag="3"
+                    android:text="@string/treatment"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextView13"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:lineSpacingExtra="0sp"
+                    android:tag="3"
+                    android:text="@string/effectiveness"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider_line_2"
+                style="@style/LineView"
+                android:layout_marginVertical="@dimen/_8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_treatments" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_treatments_empty"
+                style="@style/TextView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical"
+                android:padding="@dimen/_10dp"
+                android:text="@string/no_treatments_available"
+                android:visibility="@{((model.treatments==null) || (model.treatments.size()==0))  ? View.VISIBLE : View.GONE}"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_line_2" />
+
+            <LinearLayout
+                android:id="@+id/rv_my_treatments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical"
+                android:visibility="@{((model.treatments!=null) &amp;&amp; (model.treatments.size()>0))  ? View.VISIBLE : View.GONE}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_treatments_empty"
+                tools:listitem="@layout/row_severity" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/divider_line_3"
+            style="@style/LineView"
+            android:layout_marginVertical="@dimen/_8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_main" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

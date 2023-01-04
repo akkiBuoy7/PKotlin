@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.login.LoginFragment"
+        android:label="fragment_login"
+        app:popUpToInclusive="true"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_forgetPasswordFragment"
+            app:destination="@id/forgetPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signupYourselfFragment"
+            app:destination="@id/signupYourselfFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signupConditionsFragment"
+            app:destination="@id/signupConditionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.signup.SignupFragment"
+        android:label="SignupFragment"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signupFragment_to_signupYourselfFragment"
+            app:destination="@id/signupYourselfFragment" />
+        <action
+            android:id="@+id/action_signupFragment_to_signupConditionsFragment"
+            app:destination="@id/signupConditionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupConditionsFragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.signup.SignupConditionsFragment"
+        android:label="SignupConditionsFragment"
+        app:popUpToInclusive="true"
+        tools:layout="@layout/fragment_signup_conditions">
+        <action
+            android:id="@+id/action_signupConditionsFragment_to_signupYourselfFragment"
+            app:destination="@id/signupYourselfFragment" />
+        <action
+            android:id="@+id/action_signupConditionsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupYourselfFragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.signup.SignupYourselfFragment"
+        android:label="SignupYourselfFragment"
+        app:popUpToInclusive="true"
+        tools:layout="@layout/fragment_signup_yourself">
+        <action
+            android:id="@+id/action_signupYourselfFragment_to_signupConditionsFragment"
+            app:destination="@id/signupConditionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPasswordFragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.login.ForgetPasswordFragment"
+        android:label="ForgetPasswordFragment"
+        app:popUpToInclusive="true"
+        tools:layout="@layout/fragment_forget_password" />
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="plm.patientslikeme2.ui.main.view.fragment.login.ResetPasswordFragment"
+        android:label="ResetPasswordFragment"
+        tools:layout="@layout/fragment_reset_password" />
+</navigation>

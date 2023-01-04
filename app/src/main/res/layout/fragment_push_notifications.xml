@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/parentLayoutColor"
+        android:padding="@dimen/_10dp"
+        tools:context=".ui.main.view.fragment.settings.PushNotificationsFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_16dp"
+                android:paddingEnd="@dimen/_16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/_10dp">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_16dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:paddingTop="@dimen/_4dp"
+                        android:text="@string/treatment_reminder" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/sc_treatment_reminder"
+                        style="@style/SwitchButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_35dp" />
+                </LinearLayout>
+
+                <View style="@style/DotLineView" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/_10dp">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_16dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center|start"
+                        android:paddingTop="@dimen/_4dp"
+                        android:text="@string/goal_reminders" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/sc_goal_reminder"
+                        style="@style/SwitchButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_35dp" />
+                </LinearLayout>
+
+                <View style="@style/DotLineView" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/_10dp">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_16dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:paddingTop="@dimen/_4dp"
+                        android:text="@string/private_messages" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/sc_private_messages"
+                        style="@style/SwitchButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_35dp" />
+                </LinearLayout>
+
+                <View style="@style/DotLineView" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/_16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_three">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextViewBold16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:paddingTop="@dimen/_4dp"
+                        android:text="@string/community_updates" />
+                </LinearLayout>
+
+                <View style="@style/DotLineView" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/_10dp">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView16"
+                        android:layout_width="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_16dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:paddingTop="@dimen/_4dp"
+                        android:text="@string/replies_reactions_discussions_started" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/sc_replies_reactions"
+                        style="@style/SwitchButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_35dp" />
+                </LinearLayout>
+
+                <View style="@style/DotLineView" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/_10dp">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_16dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:paddingTop="@dimen/_4dp"
+                        android:text="@string/discussions_im_following" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/sc_discussion"
+                        style="@style/SwitchButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_35dp" />
+                </LinearLayout>
+
+                <View style="@style/DotLineView" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/_10dp">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:paddingTop="@dimen/_4dp"
+                        android:text="@string/someone_mentions_me" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/sc_someone_mentions"
+                        style="@style/SwitchButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_35dp" />
+                </LinearLayout>
+
+                <View style="@style/DotLineView" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/_10dp">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_16dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:paddingTop="@dimen/_4dp"
+                        android:text="@string/someone_started_following_me" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/sc_someone_started"
+                        style="@style/SwitchButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_35dp" />
+                </LinearLayout>
+
+                <View style="@style/DotLineView" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/_10dp">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView16"
+                        android:layout_width="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_16dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:paddingTop="@dimen/_4dp"
+                        android:text="@string/discussions_started_by_people_follow" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/sc_discussion_started"
+                        style="@style/SwitchButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_35dp" />
+                </LinearLayout>
+
+                <View style="@style/DotLineView" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

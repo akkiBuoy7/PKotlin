@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="plm.patientslikeme2.data.model.action.ActionModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:cardBackgroundColor="@{model.isSuccess ? @color/green_success : @color/red_error}"
+        app:cardCornerRadius="@dimen/_10dp"
+        tools:cardBackgroundColor="@color/green_success"
+        tools:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:src="@{model.drawable}"
+                tools:src="@drawable/ic_success" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_title"
+                style="@style/TextView13"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:layout_toStartOf="@+id/iv_close"
+                android:layout_toEndOf="@+id/iv_type"
+                android:gravity="center|start"
+                android:paddingVertical="@dimen/_5dp"
+                android:text="@{model.message}"
+                android:textColor="@color/white"
+                tools:text="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_close_dark_green"
+                app:tint="@color/white" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

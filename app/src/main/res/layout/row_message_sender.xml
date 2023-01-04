@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="plm.patientslikeme2.data.model.messages.ThreadMessages" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_6dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_name"
+                style="@style/TextView13"
+                android:layout_marginStart="@dimen/_4dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:padding="@dimen/_0dp"
+                app:upperFirstChar="@{(model.reply_to_message_id==null) ? `Your original message` : `You replied`}"
+                tools:text="Member User Name" />
+
+            <plm.patientslikeme2.utils.usercontrol.HexagonImageView
+                android:id="@+id/iv_user"
+                android:layout_width="@dimen/_35dp"
+                android:layout_height="@dimen/_35dp"
+                app:siShape="@drawable/ic_hexagon_mask"
+                android:layout_gravity="center"
+                android:src="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_2dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_message_sender"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_12dp"
+            android:paddingBottom="@dimen/_12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_top">
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_time"
+                style="@style/TextView13"
+                android:paddingStart="@dimen/_14dp"
+                android:paddingEnd="@dimen/_24dp"
+                android:tag="14"
+                android:textColor="@color/gray_dark_5"
+                app:getTodayYesterdayWithTimeFromDateTime="@{model.created_at}"
+                tools:text="Yesterday" />
+
+            <WebView
+                android:id="@+id/tv_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:scrollbars="none"
+                tools:ignore="WebViewLayout" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

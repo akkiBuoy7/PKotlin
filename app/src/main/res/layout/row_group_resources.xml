@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="model"
+            type="plm.patientslikeme2.data.model.community.resource.ResourceModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5dp"
+        app:cardCornerRadius="@dimen/_20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:id="@+id/fl_image"
+                android:layout_width="@dimen/_130dp"
+                android:layout_height="@dimen/_150dp"
+                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:visibility="@{TextUtils.isEmpty(model.promo_image) ? View.GONE : View.VISIBLE}">
+
+                <plm.patientslikeme2.utils.usercontrol.RoundishImageView
+                    android:id="@+id/iv_banner"
+                    android:layout_width="@dimen/_130dp"
+                    android:layout_height="@dimen/_150dp"
+                    android:contentDescription="@null"
+                    android:scaleType="fitXY"
+                    android:visibility="@{TextUtils.isEmpty(model.promo_image) ? View.GONE : View.VISIBLE}"
+                    app:cornerRadius="@dimen/_10dp"
+                    app:loadRoundImage="@{model.promo_image}"
+                    app:roundedCorners="all"
+                    tools:src="@drawable/ic_round_image" />
+
+                <ImageView
+                    android:id="@+id/iv_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_play_button" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/fl_image"
+                android:layout_alignBottom="@+id/fl_image"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/_10dp"
+                android:layout_toEndOf="@+id/fl_image"
+                android:orientation="vertical">
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_content_type"
+                    style="@style/TextView13"
+                    android:layout_alignParentTop="true"
+                    android:paddingTop="@dimen/_4dp"
+                    android:textColor="@color/gray_dark_5"
+                    tools:text="3 minute videos" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_title"
+                    style="@style/TextViewBold16"
+                    android:layout_below="@+id/tv_content_type"
+                    android:maxLines="2"
+                    android:text="@{model.headline}"
+                    tools:text="How to read a drug\nlabel" />
+
+                <LinearLayout
+                    android:id="@+id/ll_sponsored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title"
+                    android:orientation="horizontal">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView13"
+                        android:layout_width="wrap_content"
+                        android:text="@string/sponsored_by"
+                        android:textColor="@color/gray_dark_5"
+                        android:visibility="gone" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_sponsored"
+                        style="@style/TextView16"
+                        android:layout_width="wrap_content"
+                        android:maxLines="1"
+                        android:text="@{model.detailed_author}"
+                        android:textColor="@color/gray_dark_5"
+                        android:textSize="@dimen/_13sp"
+                        tools:text="Publix" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_sponsored"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_15dp">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_comment_count"
+                        style="@style/TextView13"
+                        android:layout_width="wrap_content"
+                        android:drawableStart="@drawable/ic_comments_24"
+                        android:drawablePadding="@dimen/_5dp"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/_3dp"
+                        android:text="@{model.comments_count}"
+                        android:textColor="@color/gray_dark_5"
+                        tools:text="24" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_like_count"
+                        style="@style/TextView13"
+                        android:layout_width="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_12dp"
+                        android:drawableStart="@drawable/ic_like_24"
+                        android:drawablePadding="@dimen/_5dp"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/_3dp"
+                        android:text="@{model.likes_count}"
+                        android:textColor="@color/gray_dark_5"
+                        tools:text="56" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

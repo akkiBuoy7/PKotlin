@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="groupOverviewResponse"
+            type="plm.patientslikeme2.data.model.community.groups.groupOverview.GroupOverviewResponse" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/parentLayoutColor"
+        tools:context=".ui.main.view.fragment.community.groups.groupDetails.GroupOverviewFragment">
+
+        <ViewStub
+            android:id="@+id/vs_no_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/layout_no_result"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_16dp">
+
+            <include
+                android:id="@+id/highlight"
+                layout="@layout/layout_group_overview_highlights"
+                android:visibility="@{((groupOverviewResponse.data != null) )  ? View.VISIBLE : View.GONE}"
+                app:groupOverviewResponse="@{groupOverviewResponse}"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/event"
+                layout="@layout/layout_group_overview_events"
+                android:visibility="@{((groupOverviewResponse.data.group.events != null) &amp;&amp; (groupOverviewResponse.data.group.events.size()>0))  ?  View.VISIBLE : View.GONE}"
+                app:layout_constraintTop_toBottomOf="@+id/highlight" />
+
+            <include
+                android:id="@+id/discussions"
+                layout="@layout/layout_group_overview_featured_discussions"
+                android:visibility="@{((groupOverviewResponse.data.group.featuredDiscussions != null) &amp;&amp; (groupOverviewResponse.data.group.featuredDiscussions.size()>0))  ?  View.VISIBLE : View.GONE}"
+                app:layout_constraintTop_toBottomOf="@+id/event" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserButton
+                android:id="@+id/btn_leave_group"
+                style="@style/ButtonDarkGreenBorder"
+                android:layout_width="wrap_content"
+                android:text="@string/leave_this_group"
+                android:textSize="@dimen/_16sp"
+                android:visibility="@{groupOverviewResponse.data.group.isMember? View.VISIBLE: View.GONE}"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/discussions" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/discussions"
+                android:visibility="@{groupOverviewResponse.data.group.isMember? View.GONE: View.VISIBLE}"
+                android:background="@color/transparent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

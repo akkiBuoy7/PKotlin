@@ -1,0 +1,22 @@
+{
+  "success": true,
+  "message": "",
+  "data": {
+    "promo_card": [
+      {
+        "id": 1,
+        "title": "What is it Like Living with\nAlpha-1-Antitrypsin Deficiency?",
+        "description": "We want to interview you!-1",
+        "color": "#C1EFE1"
+      },
+      {
+        "id": 2,
+        "title": "What is it Like Living with\nAlpha-1-Antitrypsin Deficiency?",
+        "description": "We want to interview you!-2",
+        "color": "#C7EAF3"
+      }
+    ]
+  },
+  "meta": {
+  }
+}

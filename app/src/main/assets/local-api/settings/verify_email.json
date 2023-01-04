@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "message": null,
+  "data": {
+    "email_verified": false
+  },
+  "meta": {}
+}

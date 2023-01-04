@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="plm.patientslikeme2.data.model.community.events.EventModel" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_5dp"
+        android:layout_marginBottom="@dimen/_5dp"
+        app:cardCornerRadius="@dimen/_20dp">
+
+        <LinearLayout
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16dp"
+                android:orientation="horizontal">
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextViewBold16"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    app:htmlString="@{model.event_type}"
+                    tools:text="Webinar" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_ribbon"
+                    style="@style/TextView12"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_ribbon_green"
+                    android:drawableStart="@drawable/ic_done_10"
+                    android:drawablePadding="@dimen/_5dp"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_8dp"
+                    android:paddingEnd="@dimen/_8dp"
+                    android:text="@string/you_re_in"
+                    android:textColor="@color/white"
+                    android:visibility="@{model.followed? View.VISIBLE: View.GONE}" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_10dp"
+                android:paddingHorizontal="@dimen/_10dp">
+
+                <plm.patientslikeme2.utils.usercontrol.RoundishImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150dp"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:visibility="@{model.cover_photo != null? View.VISIBLE: View.GONE}"
+                    app:cornerRadius="@dimen/_8dp"
+                    app:loadRoundImage="@{model.cover_photo}"
+                    app:roundedCorners="all"
+                    tools:src="@drawable/ic_round_image" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:visibility="gone"
+                    tools:src="@drawable/ic_badge_walk_stroke" />
+            </FrameLayout>
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                style="@style/TextView13"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_10dp"
+                android:textColor="@color/gray_dark_5"
+                app:endDate='@{model.start_time}'
+                app:startDate='@{model.start_time}'
+                tools:text="May 29 - Jun 4" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                style="@style/TextViewBold16"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_16dp"
+                app:htmlString="@{model.short_description}"
+                tools:text="Good morning meditation" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                style="@style/TextView14"
+                android:gravity="center"
+                android:maxLines="2"
+                android:paddingHorizontal="@dimen/_16dp"
+                android:paddingBottom="@dimen/_10dp"
+                android:textColor="@color/gray_dark_5"
+                app:htmlString="@{model.long_description}"
+                tools:text="Good morning meditation" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

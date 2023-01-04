@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="default_position">0</integer>
+    <integer name="default_threshold">3</integer>
+    <integer name="default_date_type_selection">0</integer>
+    <integer name="date_type_selection_month">1</integer>
+    <integer name="date_type_selection_day">0</integer>
+    <integer name="date_type_selection_year">2</integer>
+    <integer name="default_count_optionButtons">0</integer>
+    <integer name="circle_button_default_size">20</integer>
+    <integer name="circle_button_textsize">12</integer>
+</resources>

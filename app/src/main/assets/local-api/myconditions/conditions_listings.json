@@ -1,0 +1,169 @@
+{
+  "success": true,
+  "message": null,
+  "data": {
+    "condition_infos": [
+      {
+        "id": 1358238,
+        "condition_id": 1,
+        "name": "Amyotrophic lateral sclerosis",
+        "position": null,
+        "stage_name": null,
+        "diagnosed_since": null,
+        "known_symptoms": [
+          {
+            "id": 1,
+            "symptom_info_id": 13098108,
+            "name": "pain",
+            "privacy": "personal",
+            "history": [
+              {
+                "id": 18337093,
+                "symptom_id": 1,
+                "symptom_info_id": 13098108,
+                "severity": 1,
+                "start_date": "2022-11-14",
+                "end_date": "2022-11-14",
+                "created_at": "2022-11-14T06:18:31Z",
+                "updated_at": "2022-11-14T06:18:31Z"
+              }
+            ]
+          }
+        ],
+        "privacy": "personal",
+        "stage_id": null,
+        "first_symptom_date": null
+      },
+      {
+        "id": 1358222,
+        "condition_id": 14,
+        "name": "Multiple sclerosis",
+        "position": null,
+        "stage_name": null,
+        "diagnosed_since": null,
+        "known_symptoms": [
+          {
+            "id": 2,
+            "symptom_info_id": 13098101,
+            "name": "Depressed mood",
+            "privacy": "personal",
+            "history": [
+              {
+                "id": 18337087,
+                "symptom_id": 2,
+                "symptom_info_id": 13098101,
+                "severity": 2,
+                "start_date": "2022-11-13",
+                "end_date": "2022-11-13",
+                "created_at": "2022-11-14T04:53:36Z",
+                "updated_at": "2022-11-14T04:53:36Z"
+              }
+            ]
+          },
+          {
+            "id": 1,
+            "symptom_info_id": 13098108,
+            "name": "pain",
+            "privacy": "personal",
+            "history": [
+              {
+                "id": 18337093,
+                "symptom_id": 1,
+                "symptom_info_id": 13098108,
+                "severity": 1,
+                "start_date": "2022-11-14",
+                "end_date": "2022-11-14",
+                "created_at": "2022-11-14T06:18:31Z",
+                "updated_at": "2022-11-14T06:18:31Z"
+              }
+            ]
+          }
+        ],
+        "privacy": "personal",
+        "stage_id": null,
+        "first_symptom_date": null
+      },
+      {
+        "id": 1358230,
+        "condition_id": 3351,
+        "name": "Precordial pain",
+        "position": null,
+        "stage_name": null,
+        "diagnosed_since": null,
+        "known_symptoms": [
+          {
+            "id": 2,
+            "symptom_info_id": 13098101,
+            "name": "Depressed mood",
+            "privacy": "personal",
+            "history": [
+              {
+                "id": 18337087,
+                "symptom_id": 2,
+                "symptom_info_id": 13098101,
+                "severity": 2,
+                "start_date": "2022-11-13",
+                "end_date": "2022-11-13",
+                "created_at": "2022-11-14T04:53:36Z",
+                "updated_at": "2022-11-14T04:53:36Z"
+              }
+            ]
+          },
+          {
+            "id": 1,
+            "symptom_info_id": 13098108,
+            "name": "pain",
+            "privacy": "personal",
+            "history": [
+              {
+                "id": 18337093,
+                "symptom_id": 1,
+                "symptom_info_id": 13098108,
+                "severity": 1,
+                "start_date": "2022-11-14",
+                "end_date": "2022-11-14",
+                "created_at": "2022-11-14T06:18:31Z",
+                "updated_at": "2022-11-14T06:18:31Z"
+              }
+            ]
+          }
+        ],
+        "privacy": "personal",
+        "stage_id": null,
+        "first_symptom_date": "Oct 23, 1998"
+      },
+      {
+        "id": 1358227,
+        "condition_id": 13,
+        "name": "major depressive disorder",
+        "position": null,
+        "stage_name": null,
+        "diagnosed_since": null,
+        "known_symptoms": [
+          {
+            "id": 1,
+            "symptom_info_id": 13098108,
+            "name": "pain",
+            "privacy": "personal",
+            "history": [
+              {
+                "id": 18337093,
+                "symptom_id": 1,
+                "symptom_info_id": 13098108,
+                "severity": 1,
+                "start_date": "2022-11-14",
+                "end_date": "2022-11-14",
+                "created_at": "2022-11-14T06:18:31Z",
+                "updated_at": "2022-11-14T06:18:31Z"
+              }
+            ]
+          }
+        ],
+        "privacy": "personal",
+        "stage_id": null,
+        "first_symptom_date": null
+      }
+    ]
+  },
+  "meta": {}
+}

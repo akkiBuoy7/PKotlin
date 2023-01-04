@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/parentLayoutColor"
+        tools:context=".ui.main.view.fragment.messages.MessageConversationFragment">
+
+        <plm.patientslikeme2.utils.usercontrol.UserTextView
+            android:id="@+id/tv_no_result"
+            style="@style/TextView16"
+            android:gravity="center"
+            android:textColor="@color/gray_dark_5"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_conversations"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_4dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_message_receiver" />
+
+        <plm.patientslikeme2.utils.usercontrol.UserButton
+            android:id="@+id/btn_reply_message"
+            style="@style/ButtonDarkGreen"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_12dp"
+            android:layout_marginBottom="@dimen/_12dp"
+            android:text="@string/reply"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

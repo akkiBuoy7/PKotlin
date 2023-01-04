@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/parentLayoutColor"
+        tools:context=".ui.main.view.fragment.home.HomeFragment">
+
+        <ViewStub
+            android:id="@+id/vs_no_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/layout_no_result"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".ui.main.view.fragment.home.HomeFragment">
+
+                <!--<ImageView
+                    android:id="@+id/iv_icons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_24dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_dailyme_icons"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_user_name"
+                    style="@style/TextViewBold24"
+                    android:text="Welcome Username!"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_icons" />-->
+
+                <!--                <plm.patientslikeme2.utils.usercontrol.UserButton-->
+                <!--                    android:id="@+id/btn_add_dailyme"-->
+                <!--                    style="@style/ButtonDarkGreen"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_marginTop="8dp"-->
+                <!--                    android:text="@string/add_a_dailyme"-->
+                <!--                    android:visibility="gone"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />-->
+
+                <!--                <plm.patientslikeme2.utils.usercontrol.UserTextView-->
+                <!--                    android:id="@+id/tv_read_others_stories"-->
+                <!--                    style="@style/TextView16"-->
+                <!--                    android:layout_marginTop="@dimen/_16dp"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="@string/read_others_stories"-->
+                <!--                    android:textColor="@color/link_blue"-->
+                <!--                    android:visibility="gone"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/btn_add_dailyme" />-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_promo_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_12dp"
+                    android:paddingEnd="@dimen/_12dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/row_home_promo_card" />
+
+<!--                <include-->
+<!--                    android:id="@+id/layout_condition_card"-->
+<!--                    layout="@layout/layout_home_targeted_challenge_card"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/rv_promo_card" />-->
+
+
+                <include
+                    android:id="@+id/layout_find_a_group"
+                    layout="@layout/layout_find_a_group"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/_30dp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rv_promo_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_groups"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/_12dp"
+                    android:paddingEnd="@dimen/_12dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_find_a_group"
+                    tools:listitem="@layout/row_community_my_groups" />
+
+                <LinearLayout
+                    android:id="@+id/ll_group_dot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rv_groups">
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_promo_card_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_12dp"
+                    android:paddingEnd="@dimen/_12dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_group_dot"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/row_home_promo_card" />
+                <!--                <androidx.recyclerview.widget.RecyclerView-->
+                <!--                    android:id="@+id/rv_goal_tracking"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="@dimen/_10dp"-->
+                <!--                    android:clipToPadding="false"-->
+                <!--                    android:nestedScrollingEnabled="false"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    android:paddingStart="@dimen/_12dp"-->
+                <!--                    android:paddingEnd="@dimen/_12dp"-->
+                <!--                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/ll_group_dot"-->
+                <!--                    tools:listitem="@layout/row_home_goal_tracking" />-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/announcement"
+            layout="@layout/layout_announcement"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="plm.patientslikeme2.data.model.community.groups.mygroups.MyGroup" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5dp"
+        app:cardCornerRadius="@dimen/_20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_14dp">
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_group_name"
+                style="@style/TextViewBold18"
+                android:gravity="center"
+                android:maxLines="2"
+                app:upperFirstChar="@{model.name}"
+                tools:text="Chronic Kidney Disease Group"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_5dp"
+                android:layout_marginHorizontal="@dimen/_5dp"
+                android:weightSum="2">
+
+                <View
+                    style="@style/DotLineView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_2dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_dot_line" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextView16"
+                    android:layout_width="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10dp"
+                    android:layout_marginVertical="@dimen/_5dp"
+                    android:gravity="center"
+                    android:text="@string/what_s_new" />
+
+                <View
+                    style="@style/DotLineView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_2dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_dot_line" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_4dp">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_new_members"
+                        style="@style/TextView30"
+                        android:gravity="center"
+                        android:text="@{String.valueOf(model.newStats.members)}"
+                        android:textColor="@color/blue" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView12"
+                        android:gravity="center"
+                        android:text='@{( (model.newStats.members == 1))  ? @string/new_member_n : @string/new_members_n}' />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_4dp">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_new_discussions"
+                        style="@style/TextView30"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@{String.valueOf(model.newStats.discussions)}"
+                        android:textColor="@color/purple" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView12"
+                        android:gravity="center"
+                        android:text='@{( (model.newStats.discussions == 1))  ? @string/new_discussion_n : @string/new_discussions_n}' />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_4dp">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_new_comments"
+                        style="@style/TextView30"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@{String.valueOf(model.newStats.comments)}"
+                        android:textColor="@color/pink_dark" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView12"
+                        android:gravity="center"
+                        android:text='@{( (model.newStats.comments == 1))  ? @string/new_comment_n : @string/new_comments_n}' />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

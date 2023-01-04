@@ -1,0 +1,19 @@
+{
+    "success": true,
+    "message": "",
+    "data": {
+        "user_preference": {
+            "mobile_push_notification": {
+                "treatment_reminders": false,
+                "goal_reminders": false,
+                "private_messages": false,
+                "reactions_to_discussion": false,
+                "discussion_following": false,
+                "someone_mentioned": false,
+                "someone_following": false,
+                "discussion_started": false
+            }
+        }
+    },
+    "meta": {}
+}

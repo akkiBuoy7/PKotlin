@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="user"
+            type="plm.patientslikeme2.data.model.community.members.Users" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_28dp"
+        android:layout_marginTop="@dimen/_12dp"
+        android:layout_marginEnd="@dimen/_28dp"
+        android:layout_marginBottom="@dimen/_12dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_10dp"
+            android:paddingEnd="@dimen/_10dp"
+            android:paddingTop="@dimen/_5dp"
+            android:paddingBottom="@dimen/_5dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <plm.patientslikeme2.utils.usercontrol.HexagonImageView
+                    android:id="@+id/iv_user"
+                    android:layout_width="@dimen/_40dp"
+                    android:layout_height="@dimen/_45dp"
+                    app:siShape="@drawable/ic_hexagon_mask"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/_4dp"
+                    android:src="@color/white" />
+
+                <ImageView
+                    android:id="@+id/iv_verified"
+                    android:layout_width="@dimen/_22dp"
+                    android:layout_height="@dimen/_22dp"
+                    android:layout_gravity="end|top"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_verified_16"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_name"
+                style="@style/TextView14"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:maxLines="1"
+                android:minLines="1"
+                android:visibility="@{user.name.length()>0 ? View.VISIBLE : View.INVISIBLE}"
+                app:textCapSentences="@{user.name}"
+                tools:text="MaureenMoon235" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_marginStart="@dimen/_28dp"
+            android:layout_marginEnd="@dimen/_28dp"
+            style="@style/DotLineView" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <import type="plm.patientslikeme2.utils.extensions.DateExtensionsKt" />
+        <variable
+            name="model"
+            type="plm.patientslikeme2.data.model.conditions.ConditionInfosItem"/>
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_6dp"
+        app:cardCornerRadius="@dimen/_20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_14dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_condition_name"
+                    style="@style/TextViewBold16"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="@dimen/_5dp"
+                    android:layout_toStartOf="@id/iv_arrow"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    app:upperFirstChar="@{model.name}" />
+
+                <ImageView
+                    android:id="@+id/iv_arrow"
+                    android:layout_width="@dimen/_35dp"
+                    android:layout_height="@dimen/_35dp"
+                    android:contentDescription="@null"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_forward_arrow" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/ll_stage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="@{model.conditionStagePresent? View.VISIBLE: View.GONE}"
+                    android:orientation="horizontal">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextViewBold16"
+                        android:layout_width="wrap_content"
+                        android:gravity="center|start"
+                        android:text="@string/_stage" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_stage_name"
+                        style="@style/TextView16"
+                        android:layout_marginStart="@dimen/_2dp"
+                        android:gravity="center|start"
+                        android:text="@{model.stageName == null ? @string/no_stage_added : model.stageName.toString()}"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_diagnosed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="@{model.diagnosedSince==null? View.GONE: View.VISIBLE}"
+                    android:orientation="horizontal">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextViewBold16"
+                        android:layout_width="wrap_content"
+                        android:gravity="center|start"
+                        android:text="@string/diagnosed" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_diagnosed_date"
+                        style="@style/TextView16"
+                        android:gravity="center|start"
+                        android:layout_marginStart="@dimen/_2dp"
+                        android:text="@{(model.diagnosedSince !=null) ? DateExtensionsKt.formatDate(model.diagnosedSince.toString()) : ``}" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

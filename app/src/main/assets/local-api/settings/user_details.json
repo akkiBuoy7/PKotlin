@@ -1,0 +1,54 @@
+{
+  "user": {
+    "id": 959039,
+    "email": "test16@gmail.com",
+    "login": "sambhaji_16",
+    "full_name": "sambhaji_16",
+    "sex": null,
+    "canned_genders": [],
+    "additional_gender": null,
+    "avatar_url": "https:/assets/portrait_default-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg",
+    "birth_date": "2001-11-09",
+    "city": null,
+    "state": null,
+    "postcode": null,
+    "ethnicity_id": null,
+    "education_level_id": null,
+    "age_and_address_text": "21 years old",
+    "primary_condition_text": null,
+    "primary_interest": null,
+    "secondary_interests": [],
+    "health_insurance_type_id": null,
+    "military_status": null,
+    "military_branch_id": null,
+    "military_rank": null,
+    "military_job": null,
+    "bio": {
+      "content": "",
+      "brief_bio": null
+    },
+    "accreditations": [],
+    "profile_colour": null,
+    "communities": [],
+    "quick_stats": {
+      "since": "Member since Nov  8, 2022",
+      "followers": "0 followers",
+      "following": "Following 0 members",
+      "helpful": "0 Helpful marks received"
+    },
+    "condition_infos": [
+      {
+        "id": 1403352,
+        "condition_id": 3366,
+        "name": "AKI (acute kidney injury) (HCC)",
+        "position": 1,
+        "stage_name": "Stage IB",
+        "diagnosed_since": null,
+        "known_symptoms": [],
+        "privacy": "personal",
+        "stage_id": 3
+      }
+    ],
+    "treatment_histories": []
+  }
+}ō

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="@dimen/_16dp"
+        android:paddingTop="@dimen/_16dp"
+        android:paddingEnd="@dimen/_16dp"
+        android:paddingBottom="@dimen/_36dp">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_close_dark_green"
+            app:tint="@color/gray_dark_4" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_close"
+            android:layout_below="@+id/iv_close"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10dp">
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextViewBold24"
+                    android:text="@string/about_our_privacy_settings"
+                    android:textColor="@color/teal_darker" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextView16"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:text="@string/privacy_settings_details_1"
+                    android:textColor="@color/gray_dark_7" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextViewBold16"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:text="@string/privacy_settings_details_2"
+                    android:textColor="@color/gray_dark_7" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextView16"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:text="@string/privacy_settings_details_3"
+                    android:textColor="@color/gray_dark_7" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextViewBold16"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:text="@string/privacy_settings_details_4"
+                    android:textColor="@color/gray_dark_7" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    style="@style/TextView16"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:text="@string/privacy_settings_details_5"
+                    android:textColor="@color/gray_dark_7" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <plm.patientslikeme2.utils.usercontrol.UserButton
+            android:id="@+id/btn_close"
+            style="@style/ButtonDarkGreenBorder"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/close"
+            android:textSize="@dimen/_14sp" />
+    </RelativeLayout>
+</layout>

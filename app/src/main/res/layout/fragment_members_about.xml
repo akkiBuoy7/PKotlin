@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="plm.patientslikeme2.utils.extensions.IntentsKt" />
+
+        <variable
+            name="model"
+            type="plm.patientslikeme2.data.model.profile.MyProfileResponse" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/_24dp"
+        android:paddingTop="@dimen/_10dp"
+        android:paddingBottom="@dimen/_24dp"
+        tools:context=".ui.main.view.fragment.profile.MemberAboutFragment">
+
+        <ViewStub
+            android:id="@+id/vs_no_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/layout_no_result"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_heading"
+                    style="@style/TextView20"
+                    android:gravity="center|start"
+                    android:lineSpacingExtra="0sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:upperFirstChar="@{((model.data.user_profile.about.story_title!=null)?model.data.user_profile.about.story_title : ``)}" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_description"
+                    style="@style/TextView16"
+                    android:lineSpacingExtra="0sp"
+                    android:paddingTop="@dimen/_8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_heading" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_my_story_empty"
+                    style="@style/TextView16"
+                    android:layout_marginVertical="@dimen/_8dp"
+                    android:gravity="center|start"
+                    android:lineSpacingExtra="0sp"
+                    android:text="@string/you_haven_t_added_your_story_yet"
+                    android:textColor="@color/gray_dark_5"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+                <View
+                    android:id="@+id/divider_line_1"
+                    style="@style/DotLineView"
+                    android:layout_marginVertical="@dimen/_8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_my_story_empty" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_conditions"
+                    style="@style/TextView20"
+                    android:gravity="center|start"
+                    android:lineSpacingExtra="0sp"
+                    android:paddingTop="@dimen/_16dp"
+                    android:text="@string/conditions"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider_line_1" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_conditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_conditions"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/row_profile_condition" />
+
+                <View
+                    android:id="@+id/divider_line_2"
+                    style="@style/DotLineView"
+                    android:layout_marginVertical="@dimen/_8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rv_conditions" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_community_badges"
+                    style="@style/TextView20"
+                    android:gravity="center|start"
+                    android:lineSpacingExtra="0sp"
+                    android:paddingTop="@dimen/_16dp"
+                    android:text="@string/community_badges"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider_line_2" />
+
+                <LinearLayout
+                    android:id="@+id/ll_badges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_community_badges">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_badge1"
+                        style="@style/TextView13"
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/bg_badge_gray"
+                        android:gravity="center|start"
+                        android:paddingHorizontal="@dimen/_10dp"
+                        android:paddingVertical="@dimen/_4dp"
+                        android:text="PLM Staff"
+                        android:textColor="@color/leader_badge_color"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/divider_line_2" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_badge2"
+                        style="@style/TextView13"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="@dimen/_8dp"
+                        android:background="@drawable/bg_badge_gold"
+                        android:gravity="center|start"
+                        android:paddingHorizontal="@dimen/_10dp"
+                        android:paddingVertical="@dimen/_4dp"
+                        android:text="ToA YYYY"
+                        android:textColor="@color/gray_dark_5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/divider_line_2" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_badge3"
+                        style="@style/TextView13"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="@dimen/_8dp"
+                        android:background="@drawable/bg_badge_gold"
+                        android:gravity="center|start"
+                        android:paddingHorizontal="@dimen/_10dp"
+                        android:paddingVertical="@dimen/_4dp"
+                        android:text="Leader"
+                        android:textColor="@color/gray_dark_5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/divider_line_2" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider_line_3"
+                    style="@style/DotLineView"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:paddingTop="@dimen/_16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll_badges" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_quick_stats"
+                    style="@style/TextView20"
+                    android:gravity="center|start"
+                    android:lineSpacingExtra="0sp"
+                    android:paddingTop="@dimen/_16dp"
+                    android:text="@string/quick_stats"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider_line_3" />
+
+                <LinearLayout
+                    android:id="@+id/ll_quick_stats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_quick_stats">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_quick_stats_1"
+                        style="@style/TextView16"
+                        android:paddingVertical="@dimen/_4dp"
+                        android:text="@{@string/member_since +` ` + model.data.user_profile.about.quick_stats.member_since}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_quick_stats_2"
+                        style="@style/TextView16"
+                        android:nestedScrollingEnabled="true"
+                        android:paddingVertical="@dimen/_4dp"
+                        android:text="@{model.data.user_profile.about.quick_stats.followers_count +` `+@string/followers}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_quick_stats_3"
+                        style="@style/TextView16"
+                        android:paddingVertical="@dimen/_4dp"
+                        android:text="@{@string/following+` ` + model.data.user_profile.about.quick_stats.followings_count + ` `+@string/members_lowercase}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_quick_stats_4"
+                        style="@style/TextView16"
+                        android:paddingVertical="@dimen/_4dp"
+                        android:text="@{model.data.user_profile.about.quick_stats.helpful_marks_received + ` `+@string/helpful_marks_received}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_quick_stats_5"
+                        style="@style/TextView16"
+                        android:paddingVertical="@dimen/_4dp"
+                        android:text="@{model.data.user_profile.about.quick_stats.posted_comments_count+` `+@string/replies_posted}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider_line_4"
+                    style="@style/DotLineView"
+                    android:layout_marginVertical="@dimen/_8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll_quick_stats" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_interests"
+                    style="@style/TextView20"
+                    android:gravity="center|start"
+                    android:lineSpacingExtra="0sp"
+                    android:paddingTop="@dimen/_16dp"
+                    android:text="@string/interests"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider_line_4" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_primary_interest"
+                    style="@style/TextView16"
+                    android:layout_width="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingTop="@dimen/_8dp"
+                    android:text="@string/primary_interest_colon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_interests" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_secondary_interests"
+                    style="@style/TextView16"
+                    android:gravity="center|start"
+                    android:paddingTop="@dimen/_8dp"
+                    android:text="@string/secondary_interests_colon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_primary_interest" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_interests_empty"
+                    style="@style/TextView16"
+                    android:gravity="center|start"
+                    android:lineSpacingExtra="0sp"
+                    android:paddingTop="@dimen/_8dp"
+                    android:text="@string/you_haven_t_added_any_interests_yet"
+                    android:textColor="@color/gray_dark_5"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_secondary_interests" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

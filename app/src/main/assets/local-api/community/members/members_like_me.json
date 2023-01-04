@@ -1,0 +1,41 @@
+{
+  "success": true,
+  "message": "",
+  "data": {
+    "users": [
+      {
+        "name": "Test User",
+        "login": "testuser",
+        "profile_pic": "https://www.abcd.com/test.png",
+        "address": "test address",
+        "conditions": [
+          {
+            "id": 1,
+            "name": "Test Condition"
+          }
+        ],
+        "brief_bio": "Test user bio"
+      },
+      {
+        "name": "Blues0948",
+        "login": "testuser",
+        "profile_pic": "https://www.abcd.com/test.png",
+        "address": "Philadelphia, PA",
+        "conditions": [
+          {
+            "id": 1,
+            "name": "CKD"
+          },{
+            "id": 2,
+            "name": "MS"
+          },{
+            "id": 3,
+            "name": "Bipolar"
+          }
+        ],
+        "brief_bio": "Test user bio"
+      }
+    ]
+  },
+  "meta": {}
+}

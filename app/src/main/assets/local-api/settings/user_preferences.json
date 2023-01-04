@@ -1,0 +1,66 @@
+{
+    "success": true,
+    "message": null,
+    "data": {
+        "privacy_settings": {
+            "visible_to": "own_controlled",
+            "own_controlled": {
+                "labs": [
+                    {
+                        "id": "924",
+                        "permission_level": "personal"
+                    },
+
+                    {
+                        "id": "weight",
+                        "permission_level": "plm"
+                    },
+                    {
+                        "id": "blood_pressure",
+                        "permission_level": "plm"
+                    }
+                ],
+                "symptoms": [
+                    {
+                        "id": "1",
+                        "permission_level": "plm"
+                    },
+                    {
+                        "id": "2",
+                        "permission_level": "plm"
+                    },
+                    {
+                        "id": "3",
+                        "permission_level": "plm"
+                    },
+                    {
+                        "id": "4",
+                        "permission_level": "plm"
+                    },
+                    {
+                        "id": "5",
+                        "permission_level": "plm"
+                    }
+                ],
+                "conditions": [
+                    {
+                        "id": "2",
+                        "permission_level": "plm"
+                    },
+                    {
+                        "id": "1",
+                        "permission_level": "plm"
+                    }
+                ],
+                "treatments": [
+                    {
+                        "id": "30140",
+                        "permission_level": "plm"
+                    }
+                ]
+            }
+        },
+        "updated_at": "2022-11-04"
+    },
+    "meta": {}
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/parentLayoutColor"
+        tools:context=".ui.main.view.fragment.community.groups.CommunityAllGroupsFragment">
+
+        <ViewStub
+            android:id="@+id/vs_no_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/layout_no_result"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/parentLayoutColor"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_looking_for"
+                    style="@style/TextView16"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:gravity="center"
+                    android:text="@string/looking_for_group"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserAutoCompleteTextView
+                    android:id="@+id/ac_search_group"
+                    style="@style/editTextAuthModule"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:layout_marginBottom="@dimen/_24dp"
+                    android:drawableEnd="@drawable/ic_search"
+                    android:gravity="center|start"
+                    android:hint="@string/looking_for_group_hint"
+                    android:paddingStart="@dimen/_10dp"
+                    android:paddingTop="@dimen/_2dp"
+                    android:paddingEnd="@dimen/_1dp"
+                    android:tag="9"
+                    android:textSize="@dimen/_14sp"
+                    android:textStyle="italic" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_all_groups"
+                    style="@style/TextViewBold20"
+                    android:gravity="center"
+                    android:text="@string/all_groups" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_all_groups"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_12dp"
+                    android:paddingEnd="@dimen/_12dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_community_all_groups" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

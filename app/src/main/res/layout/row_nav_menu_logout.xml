@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/_24dp"
+    android:paddingTop="@dimen/_8dp"
+    android:paddingEnd="@dimen/_24dp"
+    android:paddingBottom="@dimen/_8dp">
+
+    <plm.patientslikeme2.utils.usercontrol.UserButton
+        android:id="@+id/btnLogout"
+        style="@style/ButtonDarkGreen"
+        android:layout_width="wrap_content"
+        android:text="@string/nav_menu_logout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

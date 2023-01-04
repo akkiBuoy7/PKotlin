@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_10dp"
+        app:cardCornerRadius="@dimen/_20dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@+id/iv_edit"
+                android:orientation="vertical">
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_title"
+                    style="@style/TextView16"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:tag="14"
+                    tools:text="Chronic kidney disease" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_stage"
+                    style="@style/TextView16"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:visibility="gone"
+                    tools:text="Stage 2" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/iv_delete"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_edit" />
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_delete" />
+        </RelativeLayout>
+
+        <plm.patientslikeme2.utils.usercontrol.UserTextView
+            android:id="@+id/tv_privacy"
+            style="@style/TextView13"
+            android:textColor="@color/gray_dark_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_top"
+            tools:text="Share with the community" />
+
+        <View
+            android:id="@+id/divider"
+            style="@style/DotLineView"
+            android:layout_marginTop="@dimen/_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_privacy" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

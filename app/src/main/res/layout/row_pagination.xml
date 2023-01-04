@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="page"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <plm.patientslikeme2.utils.usercontrol.UserTextView
+            android:id="@+id/tv_page"
+            style="@style/TextView16"
+            android:layout_width="@dimen/_40dp"
+            android:gravity="center"
+            android:paddingTop="@dimen/_14dp"
+            android:paddingBottom="@dimen/_10dp"
+            android:text="@{page}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

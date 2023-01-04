@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="plm.patientslikeme2.utils.extensions.IntentsKt" />
+
+        <variable
+            name="model"
+            type="plm.patientslikeme2.data.model.profile.UserFollowings" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4dp"
+        app:cardCornerRadius="@dimen/_20dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:id="@+id/fl_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center">
+
+                <plm.patientslikeme2.utils.usercontrol.HexagonImage
+                    android:id="@+id/iv_user"
+                    android:layout_width="@dimen/_45dp"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/_4dp"
+                    android:rotation="30"
+                    app:hexagonColor="@color/blue" />
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_short_name"
+                    style="@style/TextView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/_3dp"
+                    android:tag="14"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sp"
+                    app:firstCharacter="@{model.login}"
+                    tools:text="P" />
+
+            </FrameLayout>
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_title"
+                style="@style/TextView16"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_5dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:layout_toEndOf="@+id/fl_image"
+                android:gravity="center|start"
+                android:paddingTop="@dimen/_4dp"
+                app:upperFirstChar="@{model.login}"
+                tools:text="@string/app_name" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

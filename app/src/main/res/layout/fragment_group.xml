@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="groupOverviewResponse"
+            type="plm.patientslikeme2.data.model.community.groups.groupOverview.GroupOverviewResponse" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/parentLayoutColor"
+        tools:context=".ui.main.view.fragment.community.groups.groupDetails.GroupFragment">
+
+        <include
+            android:id="@+id/ic_success_error"
+            layout="@layout/layout_success_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ViewStub
+            android:id="@+id/vs_no_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/layout_no_result"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/groupInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill_vertical"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="@{( (groupOverviewResponse !=null) &amp;&amp; (groupOverviewResponse.data != null) )  ? View.VISIBLE : View.GONE}">
+
+                <plm.patientslikeme2.utils.usercontrol.UserTextView
+                    android:id="@+id/tv_group_name"
+                    style="@style/TextViewBold26"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:upperFirstChar='@{((groupOverviewResponse !=null) &amp;&amp; (groupOverviewResponse.data.group != null) &amp;&amp; (groupOverviewResponse.data.group.name != null))  ? (groupOverviewResponse.data.group.name.toString()) : ""}'
+                    tools:text="Chronic Kidney\nDisease Group" />
+
+                <LinearLayout
+                    android:id="@+id/ll_moderate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tvModeratedBy"
+                        style="@style/TextView13"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/moderated_by"
+                        android:textColor="@color/gray_dark_5" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <plm.patientslikeme2.utils.usercontrol.HexagonImageView
+                            android:id="@+id/iv_user"
+                            android:layout_width="@dimen/_24dp"
+                            android:layout_height="@dimen/_25dp"
+                            android:layout_marginHorizontal="@dimen/_4dp"
+                            android:src="@color/white"
+                            app:siShape="@drawable/ic_hexagon_mask" />
+
+                    </FrameLayout>
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_moderated_name"
+                        style="@style/TextView13"
+                        android:layout_width="wrap_content"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/_2dp"
+                        android:textColor="@color/gray_dark_5"
+                        tools:text="BradHornback" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_16dp">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_about_the_group"
+                        style="@style/TextView16"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/about_the_group"
+                        android:textColor="@color/blue_darker"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/bar"
+                        style="@style/TextView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="@dimen/_10dp"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/bar"
+                        android:textColor="@color/black"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_community_guidelines"
+                        style="@style/TextView16"
+                        android:maxLines="1"
+                        android:text="@string/community_guidelines"
+                        android:textColor="@color/blue_darker"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_16dp"
+                        android:layout_marginBottom="@dimen/_24dp"
+                        android:background="@drawable/bg_tab_layout_gray"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_4dp">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tab_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30dp"
+                            android:background="@color/transparent"
+                            app:tabGravity="fill"
+                            app:tabIndicator="@null"
+                            app:tabMode="scrollable"
+                            app:tabPadding="0dp"
+                            app:tabPaddingTop="@dimen/_3dp"
+                            app:tabSelectedTextColor="@color/white"
+                            app:tabTextAppearance="@style/TabLayoutText" />
+                    </LinearLayout>
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/parentLayoutColor"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <plm.patientslikeme2.utils.usercontrol.UserButton
+            android:id="@+id/btn_join_group"
+            style="@style/ButtonDarkGreen"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="@dimen/_16dp"
+            android:text="@string/join_this_group"
+            android:textSize="@dimen/_16sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <plm.patientslikeme2.utils.usercontrol.UserButton
+            android:id="@+id/btn_start_discussion"
+            style="@style/ButtonDarkGreen"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="@dimen/_16dp"
+            android:text="@string/start_a_new_discussion"
+            android:textSize="@dimen/_16sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

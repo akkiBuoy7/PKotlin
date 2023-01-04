@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_sheet_parent"
+        android:paddingHorizontal="@dimen/_16dp"
+        android:paddingTop="@dimen/_16dp"
+        android:paddingBottom="@dimen/_16dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                style="@style/TextViewBold16"
+                android:gravity="center"
+                android:text="@string/options" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="end"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_close_dark_green"
+                app:tint="@color/gray_dark_4" />
+        </RelativeLayout>
+
+
+        <plm.patientslikeme2.utils.usercontrol.UserTextView
+            android:id="@+id/tv_flag"
+            style="@style/TextView16"
+            android:gravity="center|start"
+            android:paddingHorizontal="@dimen/_16dp"
+            android:paddingVertical="@dimen/_16dp"
+            android:text="@string/flag_misleading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_header" />
+
+        <View
+            android:id="@+id/divider"
+            style="@style/DotLineView"
+            android:layout_marginHorizontal="@dimen/_8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_flag" />
+
+        <plm.patientslikeme2.utils.usercontrol.UserTextView
+            android:id="@+id/tv_block_member"
+            style="@style/TextView16"
+            android:gravity="center|start"
+            android:paddingHorizontal="@dimen/_16dp"
+            android:paddingVertical="@dimen/_16dp"
+            android:text="@string/block_member"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

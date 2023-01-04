@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="plm.patientslikeme2.utils.extensions.DateExtensionsKt" />
+
+        <variable
+            name="model"
+            type="plm.patientslikeme2.data.model.community.events.EventDetailsModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/parentLayoutColor"
+        tools:context=".ui.main.view.fragment.community.events.EventDetailsFragment">
+
+        <ViewStub
+            android:id="@+id/vs_no_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/layout_no_result"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/parentLayoutColor"
+            android:scrollbars="none">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_20dp">
+
+                <plm.patientslikeme2.utils.usercontrol.RoundishImageView
+                    android:id="@+id/iv_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_175dp"
+                    android:layout_margin="@dimen/_16dp"
+                    android:contentDescription="@null"
+                    android:scaleType="fitXY"
+                    android:visibility="@{model.cover_photo != null? View.VISIBLE: View.GONE}"
+                    app:cornerRadius="@dimen/_10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:loadRoundImage="@{model.cover_photo}"
+                    app:roundedCorners="all"
+                    tools:src="@drawable/ic_round_image" />
+
+                <LinearLayout
+                    android:id="@+id/ll_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_banner">
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_group_name"
+                        style="@style/TextViewBold22"
+                        android:paddingStart="@dimen/_20dp"
+                        android:paddingEnd="@dimen/_20dp"
+                        android:textColor="@color/teal_darker"
+                        app:htmlString='@{model.title}'
+                        tools:text="Lorem ipsum sit amir dar setum aveniris" />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        android:id="@+id/tv_moderate"
+                        style="@style/TextView13"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:paddingStart="@dimen/_20dp"
+                        android:paddingEnd="@dimen/_20dp"
+                        android:text="@string/moderated_by_colon"
+                        android:textColor="@color/gray_dark_5" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_moderate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_16dp"
+                        android:paddingEnd="@dimen/_16dp">
+
+                        <plm.patientslikeme2.utils.usercontrol.HexagonImageView
+                            android:id="@+id/iv_moderator"
+                            android:layout_width="@dimen/_32dp"
+                            app:siShape="@drawable/ic_hexagon_mask"
+                            android:layout_height="@dimen/_32dp"
+                            tools:src="@color/white" />
+
+                        <plm.patientslikeme2.utils.usercontrol.UserTextView
+                            android:id="@+id/tv_user_name"
+                            style="@style/TextView16"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_4dp"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:paddingTop="@dimen/_4dp"
+                            android:text="@{model.moderator.login}"
+                            tools:text="MemberUsername" />
+
+                        <plm.patientslikeme2.utils.usercontrol.UserTextView
+                            style="@style/TextView13"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_8dp"
+                            android:layout_marginTop="@dimen/_2dp"
+                            android:background="@drawable/bg_round_yellow_border"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/_4dp"
+                            android:paddingTop="@dimen/_2dp"
+                            android:paddingEnd="@dimen/_4dp"
+                            android:textColor="@color/gray_dark_5"
+                            android:visibility="gone"
+                            tools:text="PLM" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_20dp"
+                        android:paddingEnd="@dimen/_20dp">
+
+                        <plm.patientslikeme2.utils.usercontrol.UserTextView
+                            style="@style/TextViewBold16"
+                            android:layout_width="wrap_content"
+                            android:text="@string/date_colon" />
+
+                        <plm.patientslikeme2.utils.usercontrol.UserTextView
+                            style="@style/TextView16"
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="@dimen/_5dp"
+                            android:maxLines="1"
+                            android:text="@{model.date}" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_20dp"
+                        android:paddingEnd="@dimen/_20dp">
+
+                        <plm.patientslikeme2.utils.usercontrol.UserTextView
+                            style="@style/TextViewBold16"
+                            android:layout_width="wrap_content"
+                            android:text="@string/time_colon" />
+
+                        <plm.patientslikeme2.utils.usercontrol.UserTextView
+                            style="@style/TextView16"
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="@dimen/_5dp"
+                            android:maxLines="1"
+                            android:text="@{model.time + ` (` + model.timezone + `)`}" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_20dp"
+                        android:paddingEnd="@dimen/_20dp">
+
+                        <plm.patientslikeme2.utils.usercontrol.UserTextView
+                            style="@style/TextViewBold16"
+                            android:layout_width="wrap_content"
+                            android:text="@string/duration_colon" />
+
+                        <plm.patientslikeme2.utils.usercontrol.UserTextView
+                            style="@style/TextView16"
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="@dimen/_5dp"
+                            android:maxLines="1"
+                            android:text="@{model.duration}" />
+                    </LinearLayout>
+
+                    <plm.patientslikeme2.utils.usercontrol.UserTextView
+                        style="@style/TextView16"
+                        android:paddingStart="@dimen/_20dp"
+                        android:paddingTop="@dimen/_10dp"
+                        android:paddingEnd="@dimen/_20dp"
+                        app:htmlString='@{model.description}'
+                        tools:text="Est imperdiet mauris nisl arcu nunc lacus vitae elementum, amet. Amet, enim diam tempus pellentesque vitae bibendum ut arcu. Adipiscing scelerisque nisl, amet mi purus vestibulum mi, nullam feugiat. Placerat nisi, ut parturient risus tellus et. Duis lacinia egestas hac." />
+
+                    <plm.patientslikeme2.utils.usercontrol.UserButton
+                        android:id="@+id/btn_join_event"
+                        style="@style/ButtonDarkGreen"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/join_the_event"
+                        android:textSize="@dimen/_16sp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,17 @@
+{
+  "success" : true,
+  "message" : "",
+  "data" : {
+    "groups" : [
+      {
+        "id" : 1,
+        "name" : "Chronic Kidney Disease Group"
+      },
+      {
+        "id" : 2,
+        "name" : "Diabetes Type 2 Group"
+      }
+    ]
+  },
+  "meta" : {}
+}

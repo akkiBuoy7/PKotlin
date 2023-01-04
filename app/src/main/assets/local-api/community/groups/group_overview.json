@@ -1,0 +1,80 @@
+{
+  "success": true,
+  "message": "",
+  "data": {
+    "group_overview": {
+      "id": 1,
+      "name": "Chronic Disease",
+      "moderator": {
+        "id": 919953,
+        "profile_pic": "https:/assets/deactivated-8d2e62882ddd1da7e17eefba4317ddaba35c2ee3c6819753a1cbd3cbc81a1d70.svg",
+        "name": "Asheer Ashraf"
+      },
+      "highlights": {
+        "new_stats": {
+          "members": 10,
+          "discussions": 6,
+          "comments": 102
+        },
+        "top_contributors": [
+          {
+            "id": 1,
+            "full_name": "AnnMorning34",
+            "avatar_url": "https://s3.us-east-2.amazonaws.com/uploads-sandbox.patientslikeme.com/avatars/155774-thumb.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIQDASYYN663DZKCA%2F20221110%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20221110T113907Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=414e7a9c807e4e4e90dd0e48f9ca17797a272d106ac2b55147aee95d85fc27b6"
+          },
+          {
+            "id": 2,
+            "full_name": "GrayFlannel34",
+            "avatar_url": "https://s3.us-east-2.amazonaws.com/uploads-sandbox.patientslikeme.com/avatars/155774-thumb.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIQDASYYN663DZKCA%2F20221110%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20221110T113907Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=414e7a9c807e4e4e90dd0e48f9ca17797a272d106ac2b55147aee95d85fc27b6"
+          },
+          {
+            "id": 3,
+            "full_name": "JayBlue456",
+            "avatar_url": "https://s3.us-east-2.amazonaws.com/uploads-sandbox.patientslikeme.com/avatars/155774-thumb.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIQDASYYN663DZKCA%2F20221110%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20221110T113907Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=414e7a9c807e4e4e90dd0e48f9ca17797a272d106ac2b55147aee95d85fc27b6"
+          }
+        ]
+      },
+      "events": [
+        {
+          "from_date": "2022-01-01",
+          "to_date": "2022-02-10",
+          "name": "Daily walk challenge",
+          "image": "https://picsum.photos/id/237/200/300"
+        }
+      ],
+      "featured_discussions": [
+        {
+          "tags": [
+            {"id": 0, "text": "Diet"},
+            {"id": 0, "text": "Exercise"},
+            {"id": 0, "text": "Lifestyle"},
+            {"id": 0, "text": "Dialysis"}
+          ],
+          "title": "Q: Dialysis or No Dialysis? What is the best options?",
+          "description": "Mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor... More",
+          "user": {
+            "id": 1,
+            "name": "StephanieD26",
+            "badges": [
+              "PLM STAFF"
+            ],
+            "profile_pic": ""
+          },
+          "stats": {
+            "comments": 24,
+            "thumbsups": 56
+          },
+          "latest_reply": {
+            "user": {
+              "id": 2,
+              "name": "StephanieD26"
+            },
+            "content": "Ipsum dolor sit amet, ut labore aveniris id est culpar Ipsum dolor sit amet, ut labore aveniris id est culpar Ipsum dolor sit amet, ut labore aveniris id est culpar Ipsum dolor sit amet, ut labore aveniris id est culpar",
+            "created_at": "2022-01-01 10:00:00"
+          }
+        }
+      ]
+    }
+  },
+  "meta": {}
+}

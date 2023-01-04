@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "message": "Listing My followed discussions",
+  "data": {
+    "discussions": [
+      {
+        "id": 162314,
+        "reply_count": 1,
+        "helpful_count": 0,
+        "body_html": "just to discuss something to know nothing",
+        "subject": "Why do we want to use this topic",
+        "featured": true,
+        "notify_updates": true
+      },
+      {
+        "id": 162315,
+        "reply_count": 5,
+        "helpful_count": 78,
+        "body_html": "just to discuss something",
+        "subject": "Why to use this topic",
+        "featured": false,
+        "notify_updates": false
+      }
+    ]
+  },
+  "meta": {}
+}

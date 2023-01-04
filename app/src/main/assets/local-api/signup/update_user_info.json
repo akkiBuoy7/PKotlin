@@ -1,0 +1,188 @@
+{
+  "success": true,
+  "message": null,
+  "data": {
+    "user": {
+      "id": 959000,
+      "email": "sambhaji.karad@westagilelabs.com",
+      "login": "sambhajik",
+      "full_name": "sambhajik",
+      "sex": "F",
+      "canned_genders": [],
+      "additional_gender": null,
+      "avatar_url": "https://s3.us-east-2.amazonaws.com/uploads-sandbox.patientslikeme.com/avatars/155775-full.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIQDASYYN663DZKCA%2F20221108%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20221108T104500Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=2eb989dc67c44f52d9a16172f2f46d351c4f755ca20262e0d649b8a1afbffa5d",
+      "birth_date": "1990-04-29",
+      "city": "Portsmouth",
+      "state": "NH",
+      "postcode": "00210",
+      "ethnicity_id": null,
+      "education_level_id": null,
+      "age_and_address_text": "32 years old and lives in NH, United States",
+      "primary_condition_text": null,
+      "primary_interest": null,
+      "secondary_interests": [],
+      "health_insurance_type_id": null,
+      "military_status": null,
+      "military_branch_id": null,
+      "military_rank": null,
+      "military_job": null,
+      "bio": {
+        "content": "",
+        "brief_bio": "test profile"
+      },
+      "accreditations": [],
+      "profile_colour": "ORANGE",
+      "communities": [],
+      "quick_stats": {
+        "since": "Member since Nov  7, 2022",
+        "followers": "0 followers",
+        "following": "Following 0 members",
+        "helpful": "0 Helpful marks received"
+      },
+      "condition_infos": [
+        {
+          "id": 1403340,
+          "condition_id": 3355,
+          "name": "Lactate blood increase",
+          "position": null,
+          "stage_name": null,
+          "diagnosed_since": null,
+          "known_symptoms": [],
+          "privacy": "plm"
+        },
+        {
+          "id": 1403339,
+          "condition_id": 3354,
+          "name": "PVC's (premature ventricular contractions)",
+          "position": null,
+          "stage_name": null,
+          "diagnosed_since": null,
+          "known_symptoms": [],
+          "privacy": "plm"
+        },
+        {
+          "id": 1403338,
+          "condition_id": 3353,
+          "name": "Obesity, Class III, BMI >= 40",
+          "position": null,
+          "stage_name": null,
+          "diagnosed_since": null,
+          "known_symptoms": [],
+          "privacy": "plm"
+        },
+        {
+          "id": 1403337,
+          "condition_id": 3352,
+          "name": "Tremor related to medication",
+          "position": null,
+          "stage_name": null,
+          "diagnosed_since": null,
+          "known_symptoms": [],
+          "privacy": "plm"
+        },
+        {
+          "id": 1403336,
+          "condition_id": 3351,
+          "name": "Pseudoaneurysm of femoral artery (HCC)",
+          "position": null,
+          "stage_name": null,
+          "diagnosed_since": null,
+          "known_symptoms": [],
+          "privacy": "plm"
+        },
+        {
+          "id": 1403335,
+          "condition_id": 3350,
+          "name": "Hypovolemia",
+          "position": null,
+          "stage_name": null,
+          "diagnosed_since": null,
+          "known_symptoms": [],
+          "privacy": "plm"
+        },
+        {
+          "id": 1403334,
+          "condition_id": 9,
+          "name": "amyotrophic lateral sclerosis",
+          "position": null,
+          "stage_name": null,
+          "diagnosed_since": null,
+          "known_symptoms": [],
+          "privacy": "plm"
+        },
+        {
+          "id": 1403333,
+          "condition_id": 11,
+          "name": "alcohol use disorder",
+          "position": null,
+          "stage_name": null,
+          "diagnosed_since": null,
+          "known_symptoms": [],
+          "privacy": "plm"
+        },
+        {
+          "id": 1403332,
+          "condition_id": 3348,
+          "name": "Compartment syndrome of right lower extremity (HCC)",
+          "position": null,
+          "stage_name": null,
+          "diagnosed_since": null,
+          "known_symptoms": [],
+          "privacy": "personal"
+        },
+        {
+          "id": 1403329,
+          "condition_id": 2367,
+          "name": "alexithymia",
+          "position": null,
+          "stage_name": null,
+          "diagnosed_since": null,
+          "known_symptoms": [],
+          "privacy": "plm"
+        },
+        {
+          "id": 1403328,
+          "condition_id": 157,
+          "name": "alkaptonuria",
+          "position": null,
+          "stage_name": null,
+          "diagnosed_since": null,
+          "known_symptoms": [],
+          "privacy": "plm"
+        },
+        {
+          "id": 1403327,
+          "condition_id": 3347,
+          "name": "Anticoagulation goal of INR 2 to 3",
+          "position": null,
+          "stage_name": null,
+          "diagnosed_since": null,
+          "known_symptoms": [],
+          "privacy": "plm"
+        },
+        {
+          "id": 1403326,
+          "condition_id": 3349,
+          "name": "Acute blood loss anemia",
+          "position": null,
+          "stage_name": null,
+          "diagnosed_since": null,
+          "known_symptoms": [],
+          "privacy": "plm"
+        },
+        {
+          "id": 1403309,
+          "condition_id": 815,
+          "name": "prediabetes",
+          "position": 1,
+          "stage_name": null,
+          "diagnosed_since": null,
+          "known_symptoms": [],
+          "privacy": "plm"
+        }
+      ],
+      "treatment_histories": []
+    }
+  },
+  "meta": {}
+}

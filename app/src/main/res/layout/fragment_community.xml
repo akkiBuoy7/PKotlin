@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.main.view.fragment.community.CommunityFragment">
+
+        <LinearLayout
+            android:id="@+id/ll_tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:layout_marginBottom="@dimen/_16dp"
+            android:background="@drawable/bg_tab_layout_gray"
+            android:orientation="horizontal"
+            android:padding="@dimen/_4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30dp"
+                app:tabBackground="@drawable/selector_tab_layout"
+                app:tabGravity="fill"
+                app:tabIndicator="@null"
+                app:tabMode="scrollable"
+                app:tabPadding="0dp"
+                app:tabPaddingTop="@dimen/_3dp"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextAppearance="@style/TabLayoutText" />
+        </LinearLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_65dp"
+            android:background="@color/parentLayoutColor"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_tab_layout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

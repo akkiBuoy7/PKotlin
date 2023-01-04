@@ -1,0 +1,55 @@
+{
+  "success": true,
+  "message": "Event Overview",
+  "data": {
+    "event": [
+      {
+        "id": 105,
+        "title": "<p>Webinar</p>",
+        "description": "<p><b>Real world pros & cons of dialysis:</b>\nA peer panel discussion with CKD members</p>",
+        "date": "May 16, 2pm",
+        "time": "10:00 AM",
+        "duration": "01:00",
+        "timezone": "(+05:30) GMT - Chennai",
+        "moderator": {
+          "id": 488811,
+          "login": "BenAppell",
+          "badges": [
+            "PLM STAFF"
+          ],
+          "avatar": {
+            "type": "user_initial",
+            "value": "B"
+          }
+        },
+        "cover_photo": "/cover_photos/original/missing.png",
+        "call_to_action": "",
+        "destination_url": "",
+        "followed": false
+      },
+      {
+        "id": 105,
+        "title": "<p>Challenge</p>",
+        "description": "<p>Daily walk challenge</p>",
+        "date": "May 29 - Jun 4",
+        "time": "10:00 AM",
+        "duration": "01:00",
+        "timezone": "(+05:30) GMT - Chennai",
+        "moderator": {
+          "id": 488811,
+          "login": "BenAppell",
+          "avatar": {
+            "type": "user_initial",
+            "value": "B"
+          }
+        },
+        "cover_photo": "/cover_photos/original/missing.png",
+        "call_to_action": "",
+        "destination_url": "",
+        "followed": true
+      }
+    ]
+  },
+  "meta": {
+  }
+}

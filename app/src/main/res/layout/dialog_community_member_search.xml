@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_16dp"
+        android:paddingTop="@dimen/_16dp"
+        android:paddingEnd="@dimen/_16dp"
+        android:paddingBottom="@dimen/_36dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                style="@style/TextViewBold16"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/looking_for_someone_specific" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="end"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_close_dark_green"
+                app:tint="@color/black" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rl_header">
+
+            <plm.patientslikeme2.utils.usercontrol.UserAutoCompleteTextView
+                android:id="@+id/ac_search_member"
+                style="@style/editTextAuthModule"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_12dp"
+                android:layout_marginEnd="@dimen/_12dp"
+                android:layout_marginBottom="@dimen/_4dp"
+                android:drawableEnd="@drawable/ic_search"
+                android:gravity="center|start"
+                android:hint="@string/search_for_members"
+                android:paddingStart="@dimen/_10dp"
+                android:paddingTop="@dimen/_2dp"
+                android:paddingEnd="@dimen/_1dp"
+                android:tag="9"
+                android:textSize="@dimen/_14sp"
+                android:textStyle="italic"
+                android:completionThreshold="3"
+                android:dropDownAnchor="@id/search_bar"
+                android:dropDownHeight="@dimen/_200dp"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

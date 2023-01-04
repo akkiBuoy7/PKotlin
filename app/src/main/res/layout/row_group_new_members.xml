@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="user"
+            type="plm.patientslikeme2.data.model.community.groups.members.NewMembers" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5dp"
+        app:cardCornerRadius="@dimen/_20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_16dp">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_4dp">
+
+                    <plm.patientslikeme2.utils.usercontrol.HexagonImageView
+                        android:id="@+id/iv_user"
+                        android:layout_width="@dimen/_72dp"
+                        android:layout_height="@dimen/_79dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="@dimen/_4dp"
+                        android:src="@color/white"
+                        app:siShape="@drawable/ic_hexagon_mask" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_verified"
+                    android:layout_width="@dimen/_24dp"
+                    android:layout_height="@dimen/_24dp"
+                    android:layout_gravity="end|top"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_verified_16"
+                    android:visibility="@{user.followed ? View.VISIBLE : View.GONE}" />
+
+            </FrameLayout>
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_name"
+                style="@style/TextViewBold16"
+                android:layout_marginTop="@dimen/_5dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:minLines="1"
+                android:visibility="@{user.name.length()>0 ? View.VISIBLE : View.INVISIBLE}"
+                app:textCapSentences="@{user.name}"
+                tools:text="Blues0948" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_status"
+                style="@style/TextView16"
+                android:layout_marginTop="@dimen/_8dp"
+                android:gravity="center|top"
+                android:lineSpacingExtra="@dimen/_2dp"
+                android:maxLines="3"
+                android:minLines="3"
+                android:visibility="@{user.briefBio.length()>0 ? View.VISIBLE : View.INVISIBLE}"
+                app:fullText="@{user.briefBio}"
+                app:maxLines="@{3}"
+                tools:text="I finally feel like every day is the\nbest day of my life even though I\nstruggle with multiple" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_address"
+                style="@style/TextView16"
+                android:layout_marginTop="@dimen/_8dp"
+                android:gravity="center|top"
+                android:lineSpacingExtra="@dimen/_2dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:visibility="@{user.address.length()>0 ? View.VISIBLE : View.INVISIBLE}"
+                app:textCapSentences="@{user.address}"
+                tools:text="Philadelphia, PA" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserTextView
+                android:id="@+id/tv_conditions"
+                style="@style/TextView16"
+                android:gravity="center|top"
+                android:lineSpacingExtra="@dimen/_2dp"
+                android:maxLines="2"
+                android:minLines="2"
+                android:visibility="@{user.livingWith.size()>0 ? View.VISIBLE : View.INVISIBLE}"
+                app:livingWith="@{user.livingWith}"
+                app:showLivingWithText="@{true}"
+                tools:text="Living with CKD, MS, Bipolar" />
+
+            <plm.patientslikeme2.utils.usercontrol.UserButton
+                android:id="@+id/btn_send_message"
+                style="@style/ButtonDarkGreen"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_12dp"
+                android:layout_marginBottom="@dimen/_12dp"
+                android:text="@string/send_a_welcome" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

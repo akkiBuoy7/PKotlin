@@ -1,0 +1,41 @@
+{
+  "success": true,
+  "message": null,
+  "data": [
+    {
+      "id": 1403310,
+      "condition_id": 2,
+      "name": "neuromyelitis optica",
+      "position": null,
+      "stage_name": null,
+      "diagnosed_since": null,
+      "known_symptoms": [],
+      "privacy": "plm"
+    },
+    {
+      "id": 1403307,
+      "condition_id": 1,
+      "name": "multiple sclerosis",
+      "position": null,
+      "stage_name": null,
+      "diagnosed_since": null,
+      "known_symptoms": [],
+      "privacy": "plm"
+    },
+    {
+      "id": 1403302,
+      "condition_id": 834,
+      "name": "Asperger's syndrome",
+      "position": 1,
+      "stage_name": null,
+      "diagnosed_since": null,
+      "known_symptoms": [],
+      "privacy": "plm"
+    }
+  ],
+  "meta": {}
+}
+
+
+
+
